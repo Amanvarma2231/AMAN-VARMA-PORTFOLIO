@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Varma | Python Backend, GenAI & NLP Engineer</title>
+    <meta name="description" content="Portfolio of Aman Varma - Python Developer Intern specializing in FastAPI, Flask, REST APIs, Generative AI, LLMs, NLP, MySQL, and Docker.">
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Background Cyber Grid Canvas -->
+    <div class="background-grid"></div>
+    <div class="glowing-orb orb-1"></div>
+    <div class="glowing-orb orb-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-code">&lt;</span>Aman Varma<span class="logo-code"> /&gt;</span>
+                <span class="badge-role">AI & Backend</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#ai-studio" class="nav-link highlight-link"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Studio</a>
+                <a href="#api-sandbox" class="nav-link highlight-link"><i class="fa-solid fa-server"></i> API Sandbox</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="status-pill" id="backend-status" title="Backend FastAPI Health">
+                    <span class="status-dot"></span>
+                    <span class="status-text">FastAPI Connected</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-regular fa-paper-plane"></i> Hire Me</a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-bolt text-cyan"></i> Python Backend & Generative AI Engineer
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Aman Varma</span>.<br>
+                    Crafting Intelligent APIs & AI Workflows.
+                </h1>
+                <p class="hero-subtitle">
+                    B.Tech CSE Graduate with 7+ months internship experience building scalable <span class="text-highlight">FastAPI & Flask REST APIs</span>, <span class="text-highlight">Generative AI prompt workflows</span>, <span class="text-highlight">NLP text engines</span>, and robust database architectures with MySQL & MongoDB.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#ai-studio" class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-brain"></i> Try Live AI Studio
+                    </a>
+                    <a href="#api-sandbox" class="btn btn-secondary">
+                        <i class="fa-solid fa-terminal"></i> Test REST APIs
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-envelope"></i> Contact Aman
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/Amanvarma2231" target="_blank" class="social-icon" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aman-v-697771345" target="_blank" class="social-icon" title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:amangurauli@gmail.com" class="social-icon" title="Email Aman"><i class="fa-solid fa-envelope"></i></a>
+                    <span class="social-divider"></span>
+                    <span class="hero-location"><i class="fa-solid fa-location-dot"></i> Ghaziabad, UP, India</span>
+                </div>
+
+            </div>
+
+            <div class="hero-card-wrapper">
+                <div class="glass-card profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar-container">
+                            <img src="/static/images/profile.png" alt="Aman Varma" class="profile-avatar-img">
+                        </div>
+                        <div class="profile-meta">
+                            <h3>Aman Varma</h3>
+                            <p class="text-muted">Python Developer Intern @ Druidot Consulting</p>
+                            <div class="tech-tags">
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">GenAI</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-title">aman_engineer.py</span>
+                        </div>
+                        <pre><code><span class="kwd">class</span> <span class="cls">AmanVarma</span>(<span class="cls">BackendEngine</span>):
+    <span class="kwd">def</span> <span class="fn">__init__</span>(self):
+        self.education = <span class="str">"B.Tech CSE (AKTU, CGPA: 7.12)"</span>
+        self.role = <span class="str">"Python & AI Backend Engineer"</span>
+        self.core_stack = [<span class="str">"FastAPI"</span>, <span class="str">"Flask"</span>, <span class="str">"GenAI"</span>, <span class="str">"NLP"</span>]
+        self.status = <span class="str">"Ready for New Opportunities 🚀"</span>
+
+    <span class="kwd">async def</span> <span class="fn">build_ai_pipeline</span>(self, data):
+        <span class="kwd">return await</span> self.fastapi.process(data)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metrics Bar -->
+        <div class="container">
+            <div class="glass-card metrics-bar">
+                <div class="metric-item">
+                    <div class="metric-number">7+</div>
+                    <div class="metric-label">Months Intern Experience</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <div class="metric-number">25+</div>
+                    <div class="metric-label">REST API Endpoints Built</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <div class="metric-number">26</div>
+                    <div class="metric-label">CI/CD Automated Unit Tests</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <div class="metric-number">7.12</div>
+                    <div class="metric-label">B.Tech CSE CGPA (AKTU)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PROFESSIONAL OVERVIEW</span>
+                <h2 class="section-title">Backend Architecture Meets AI Intelligence</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="glass-card about-card">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Python Backend Mastery</h3>
+                    <p>
+                        Specialized in engineering robust RESTful microservices using **FastAPI** and **Flask**. Experienced in JWT authentication, middleware design, input validation, database-driven workflows (MySQL & MongoDB), and OpenAPI specifications.
+                    </p>
+                </div>
+
+                <div class="glass-card about-card">
+                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Generative AI & LLMs</h3>
+                    <p>
+                        Proficient in prompt engineering, LLM API integration, Retrieval-Augmented Generation (RAG) concepts, and building intelligent autonomous agent workflows for enterprise automation.
+                    </p>
+                </div>
+
+                <div class="glass-card about-card">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>NLP & Text Processing</h3>
+                    <p>
+                        Hands-on experience in TF-IDF near-duplicate text detection, sentiment polarity classification, readability analysis, and automated SEO content scoring (proven in projects like ContentDesk & NLPCRM).
+                    </p>
+                </div>
+
+                <div class="glass-card about-card">
+                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>DevOps & Testing</h3>
+                    <p>
+                        Strong focus on software quality with Docker containerization, Git workflows, manual and automated unit testing, and GitHub Actions CI/CD pipelines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Interactive AI Studio Section -->
+    <section class="section ai-studio-section" id="ai-studio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">LIVE DEMONSTRATION</span>
+                <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles text-cyan"></i> Interactive AI & NLP Studio</h2>
+                <p class="section-desc">Test Aman Varma's backend AI models, NLP analyzers, and RAG assistant live in your browser.</p>
+                <div class="title-bar"></div>
+            </div>
+
+            <!-- Studio Tabs Header -->
+            <div class="studio-tabs">
+                <button class="tab-btn active" data-tab="tab-nlp">
+                    <i class="fa-solid fa-align-left"></i> Live NLP Analyzer
+                </button>
+                <button class="tab-btn" data-tab="tab-genai">
+                    <i class="fa-solid fa-sliders"></i> GenAI Prompt Studio
+                </button>
+                <button class="tab-btn" data-tab="tab-rag">
+                    <i class="fa-solid fa-comments"></i> Aman AI Assistant (RAG)
+                </button>
+            </div>
+
+            <!-- Studio Content Area -->
+            <div class="glass-card studio-container">
+
+                <!-- Tab 1: Live NLP Analyzer -->
+                <div class="tab-content active" id="tab-nlp">
+                    <div class="nlp-grid">
+                        <div class="nlp-input-col">
+                            <label class="input-label"><i class="fa-solid fa-pen-to-square"></i> Input Text for NLP & Content Desk Scoring:</label>
+                            <textarea id="nlp-input" class="form-control" rows="6" placeholder="Enter text to analyze sentiment, TF-IDF keywords, entities, and ContentDesk SEO score...">FastAPI combined with Generative AI and NLP workflows delivers exceptional, high-performance microservices. Aman Varma engineered 25+ RESTful endpoints at Druidot Consulting to streamline AI data pipelines and automated testing.</textarea>
+                            
+                            <div class="preset-buttons">
+                                <span class="preset-label">Sample Presets:</span>
+                                <button type="button" class="btn-preset" id="preset-tech">Tech Article</button>
+                                <button type="button" class="btn-preset" id="preset-crm">Customer Feedback</button>
+                                <button type="button" class="btn-preset" id="preset-clear">Clear</button>
+                            </div>
+
+                            <button id="btn-run-nlp" class="btn btn-primary btn-block mt-3">
+                                <i class="fa-solid fa-play"></i> Run NLP Analysis
+                            </button>
+                        </div>
+
+                        <div class="nlp-output-col">
+                            <div class="output-box" id="nlp-results">
+                                <div class="empty-state">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <p>Click "Run NLP Analysis" to see live results!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: GenAI Prompt Studio -->
+                <div class="tab-content" id="tab-genai">
+                    <div class="genai-grid">
+                        <div class="genai-controls">
+                            <div class="form-group">
+                                <label class="input-label">System Instruction Persona:</label>
+                                <select id="genai-system" class="form-control">
+                                    <option value="You are a Senior Python Backend Architect specializing in FastAPI and LLM systems.">Python Backend Architect</option>
+                                    <option value="You are an AI & NLP Data Engineer explaining TF-IDF and prompt tuning.">NLP & Data Specialist</option>
+                                    <option value="You are a Technical Hiring Manager evaluating Aman Varma's portfolio.">Technical Recruiter</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label class="input-label">Temperature: <span id="temp-val" class="text-cyan font-bold">0.7</span></label>
+                                <input type="range" id="genai-temp" min="0.0" max="1.5" step="0.1" value="0.7" class="range-slider">
+                                <div class="range-labels">
+                                    <span>Precise (0.0)</span>
+                                    <span>Balanced (0.7)</span>
+                                    <span>Creative (1.5)</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label class="input-label">Prompt Input:</label>
+                                <textarea id="genai-prompt-text" class="form-control" rows="4" placeholder="Ask a question about Python FastAPI, LLM integration, or microservices architecture...">Explain how FastAPI handles async requests and integrates with Generative AI prompt pipelines.</textarea>
+                            </div>
+
+                            <button id="btn-run-genai" class="btn btn-primary btn-block mt-3">
+                                <i class="fa-solid fa-sparkles"></i> Generate AI Response
+                            </button>
+                        </div>
+
+                        <div class="genai-output">
+                            <div class="code-preview genai-preview">
+                                <div class="code-header">
+                                    <span class="code-title"><i class="fa-solid fa-microchip"></i> Model Output: Aman-GenAI-Studio-v1.0</span>
+                                    <span class="token-badge" id="token-count">0 Tokens</span>
+                                </div>
+                                <div id="genai-output-box" class="genai-response-body">
+                                    <p class="text-muted">Generated response will appear here...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Aman AI Assistant (RAG Chatbot) -->
+                <div class="tab-content" id="tab-rag">
+                    <div class="chat-wrapper">
+                        <div class="chat-header">
+                            <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <h4>Aman Varma RAG Assistant</h4>
+                                <span class="status-online"><i class="fa-solid fa-circle"></i> Trained on Aman's Resume & Projects</span>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="chat-bubble bot-bubble">
+                                👋 Hi! I'm Aman Varma's AI Assistant. Ask me anything about Aman's experience at Druidot Consulting, B.Tech CSE degree, Python/FastAPI skills, or NLPCRM & ContentDesk projects!
+                            </div>
+                        </div>
+
+                        <div class="chat-chips">
+                            <button class="chip-btn" data-query="Tell me about Aman's background">Summary</button>
+                            <button class="chip-btn" data-query="What experience does Aman have at Druidot Consulting?">Experience</button>
+                            <button class="chip-btn" data-query="What projects has Aman built?">Projects</button>
+                            <button class="chip-btn" data-query="What is Aman's tech stack?">Skills</button>
+                        </div>
+
+                        <div class="chat-input-bar">
+                            <input type="text" id="chat-user-input" class="chat-input" placeholder="Type a message (e.g., 'What are Aman's Python & GenAI skills?')...">
+                            <button id="chat-send-btn" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive REST API Sandbox Section -->
+    <section class="section api-sandbox-section" id="api-sandbox">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PROJECT LIVE DEMO</span>
+                <h2 class="section-title"><i class="fa-solid fa-server text-cyan"></i> Interactive REST API Sandbox</h2>
+                <p class="section-desc">Test live RESTful endpoints designed by Aman Varma for the <strong>NLPCRM</strong> project (25+ Endpoints Architecture).</p>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="glass-card api-sandbox-card">
+                <div class="sandbox-controls">
+                    <div class="control-row">
+                        <div class="control-group flex-1">
+                            <label class="input-label">Select Endpoint:</label>
+                            <select id="api-endpoint-select" class="form-control">
+                                <option value="get_contacts">GET /api/v1/contacts (List Contacts)</option>
+                                <option value="post_contact">POST /api/v1/contacts (Create Contact)</option>
+                                <option value="post_nlp_classify">POST /api/v1/nlp/classify-intent (NLP Intent Classification)</option>
+                                <option value="post_auth_login">POST /api/v1/auth/login (JWT Auth Token)</option>
+                                <option value="get_analytics">GET /api/v1/analytics/overview (CRM Metrics)</option>
+                            </select>
+                        </div>
+                        <button id="btn-send-api" class="btn btn-primary btn-send-request">
+                            <i class="fa-solid fa-paper-plane"></i> Send Request
+                        </button>
+                    </div>
+
+                    <div class="endpoint-meta-bar" id="endpoint-meta">
+                        <span class="method-badge method-get">GET</span>
+                        <span class="path-display">/api/v1/contacts</span>
+                        <span class="endpoint-desc text-muted">Retrieves paginated list of CRM contacts with optional search filter.</span>
+                    </div>
+                </div>
+
+                <div class="sandbox-panes">
+                    <!-- Request Pane -->
+                    <div class="pane request-pane">
+                        <div class="pane-header">Request Payload (JSON)</div>
+                        <textarea id="api-request-body" class="form-control code-font" rows="8" placeholder="Request body JSON..."></textarea>
+                    </div>
+
+                    <!-- Response Pane -->
+                    <div class="pane response-pane">
+                        <div class="pane-header">
+                            <span>Response Output</span>
+                            <div class="response-status-group">
+                                <span id="res-status-badge" class="badge badge-success">200 OK</span>
+                                <span id="res-latency" class="badge badge-info"><i class="fa-solid fa-stopwatch"></i> -- ms</span>
+                            </div>
+                        </div>
+                        <pre id="api-response-body" class="code-preview-box"><code>Click "Send Request" to test endpoint...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CORE COMPETENCIES</span>
+                <h2 class="section-title">Technical Skills & Expertise</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="skills-grid">
+                
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-brands fa-python cat-icon text-cyan"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                        <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-pill">C++</span>
+                        <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-brain cat-icon text-purple"></i>
+                        <h3>AI, ML & NLP</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Artificial Intelligence</span>
+                        <span class="skill-pill">Machine Learning</span>
+                        <span class="skill-pill">NLP</span>
+                        <span class="skill-pill">Generative AI</span>
+                        <span class="skill-pill">Prompt Engineering</span>
+                        <span class="skill-pill">LLMs</span>
+                        <span class="skill-pill">TF-IDF Vectorization</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-server cat-icon text-cyan"></i>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">Django</span>
+                        <span class="skill-pill">RESTful APIs</span>
+                        <span class="skill-pill">Web Services</span>
+                        <span class="skill-pill">Microservices</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-shield-halved cat-icon text-green"></i>
+                        <h3>API & Auth Integration</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">REST API Design</span>
+                        <span class="skill-pill">OpenAPI / Swagger</span>
+                        <span class="skill-pill">JWT Auth</span>
+                        <span class="skill-pill">HTTP Protocols</span>
+                        <span class="skill-pill">Rate Limiting</span>
+                        <span class="skill-pill">Webhooks</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-database cat-icon text-cyan"></i>
+                        <h3>Databases & Storage</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">SQLite</span>
+                        <span class="skill-pill">CRUD Operations</span>
+                        <span class="skill-pill">Data Persistence</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-brands fa-docker cat-icon text-blue"></i>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</span>
+                        <span class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</span>
+                        <span class="skill-pill">CI/CD</span>
+                        <span class="skill-pill">GitHub Actions</span>
+                        <span class="skill-pill">Manual Testing</span>
+                        <span class="skill-pill">Debugging</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CAREER PATH</span>
+                <h2 class="section-title">Work Experience & Education</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Experience Item -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="badge badge-purple mb-1">INTERNSHIP</span>
+                                <h3>Python Developer Intern</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-building"></i> Druidot Consulting (OPC) Pvt. Ltd.</h4>
+                            </div>
+                            <div class="timeline-date">
+                                <i class="fa-regular fa-calendar"></i> Feb 2026 – Present | Remote
+                            </div>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Developed Python-based AI and backend applications using <strong>Flask and FastAPI</strong>, integrating RESTful APIs and data-processing workflows.</li>
+                            <li>Engineered <strong>NLP-based text processing</strong> and text analysis for AI-oriented application workflows.</li>
+                            <li>Integrated <strong>Generative AI and LLM-based capabilities</strong> through AI API integrations and prompt-driven workflows.</li>
+                            <li>Built and optimized REST APIs, backend services, automation scripts, and unit testing protocols.</li>
+                            <li>Executed data validation and processing with <strong>MySQL and MongoDB</strong> for reliable backend workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education Item -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="badge badge-info mb-1">DEGREE</span>
+                                <h3>B.Tech in Computer Science & Engineering</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-graduation-cap"></i> NITRA Technical Campus, AKTU</h4>
+                            </div>
+                            <div class="timeline-date">
+                                <i class="fa-regular fa-calendar"></i> May 2022 – June 2026 | Ghaziabad, UP
+                            </div>
+                        </div>
+                        <p class="education-metrics">
+                            <strong>CGPA:</strong> <span class="text-cyan font-bold">7.12 / 10</span> | <strong>Focus:</strong> Data Structures & Algorithms, Backend Engineering, Artificial Intelligence, Database Management.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PORTFOLIO PROJECTS</span>
+                <h2 class="section-title">Featured Engineering Projects</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: NLPCRM -->
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-users-gear text-cyan"></i></div>
+                        <div class="project-links">
+                            <a href="https://nlpcrm-1.onrender.com/" target="_blank" class="icon-link" title="Open Live App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Amanvarma2231/NLPCRM" target="_blank" class="icon-link" title="View GitHub Repo"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">NLPCRM – AI-Powered CRM Platform</h3>
+                    <p class="project-desc">
+                        Full-stack AI CRM backend system featuring 25+ RESTful API endpoints for contact management, NLP lead sentiment classification, automated email routing, and secure JWT authentication.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check text-cyan"></i> Designed and developed 25+ RESTful API endpoints across contacts, NLP, and webhooks.</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Integrated MySQL & SQLite for data persistence and workflow reliability.</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Implemented JWT access control, rate limiting, and strict input validation.</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Flask</span>
+                        <span>MySQL</span>
+                        <span>SQLite</span>
+                        <span>JWT</span>
+                        <span>Render</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: ContentDesk -->
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-newspaper text-purple"></i></div>
+                        <div class="project-links">
+                            <a href="https://content-desk.onrender.com/" target="_blank" class="icon-link" title="Open Live App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Amanvarma2231/Content-_Desk" target="_blank" class="icon-link" title="View GitHub Repo"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">ContentDesk – AI Content & SEO Platform</h3>
+                    <p class="project-desc">
+                        Enterprise content processing platform engineered with a unified Python/Flask backend, serving web and desktop channels with automated TF-IDF text duplication checking.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check text-purple"></i> Engineered a shared Python/Flask backend serving web & desktop application channels.</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Built an SEO-scoring crawler & TF-IDF near-duplicate detection algorithm.</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Implemented 26 automated unit tests in GitHub Actions CI pipeline.</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                        <span>REST APIs</span>
+                        <span>GitHub Actions</span>
+                        <span>TF-IDF</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: TrainIQ -->
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-brain text-cyan"></i></div>
+                        <div class="project-links">
+                            <a href="https://trainiq-x94b.onrender.com" target="_blank" class="icon-link" title="Open Live App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Amanvarma2231/TrainIQ" target="_blank" class="icon-link" title="View GitHub Repo"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">TrainIQ – AI Training & Analytics Platform</h3>
+                    <p class="project-desc">
+                        Intelligent AI model training tracking and evaluation platform that monitors machine learning model metrics, dataset iterations, and API inference performance.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check text-cyan"></i> Automated training pipeline tracking metrics, loss curves, and evaluation scores.</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> REST API integration for real-time model deployment and status monitoring.</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Deployed on Render with continuous deployment integrations.</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>REST APIs</span>
+                        <span>Analytics</span>
+                        <span>Render</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Enterprise Data Warehouse -->
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-database text-purple"></i></div>
+                        <div class="project-links">
+                            <a href="https://enterprise-datawarehouse-amhwlzks6yuybmcbxtls2v.streamlit.app/" target="_blank" class="icon-link" title="Open Live App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Amanvarma2231/Enterprise-Data_Warehouse" target="_blank" class="icon-link" title="View GitHub Repo"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Enterprise Data Warehouse System</h3>
+                    <p class="project-desc">
+                        Interactive enterprise data warehousing solution built with Streamlit and Python, featuring ETL pipelines, automated query optimizations, and data visualization dashboards.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check text-purple"></i> Built automated ETL data ingestion pipelines connecting relational databases.</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Designed interactive analytical dashboards with Streamlit visualization tools.</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Optimized complex SQL queries for multi-dimensional data slicing.</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>SQL</span>
+                        <span>ETL Pipelines</span>
+                        <span>Data Warehouse</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: Skill Development Platform -->
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-graduation-cap text-cyan"></i></div>
+                        <div class="project-links">
+                            <a href="https://skill-development-eosin.vercel.app/" target="_blank" class="icon-link" title="Open Live App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Amanvarma2231/skill-development" target="_blank" class="icon-link" title="View GitHub Repo"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Skill Development & Learning Platform</h3>
+                    <p class="project-desc">
+                        Full-stack interactive skill development web platform featuring skill assessment modules, learning roadmaps, and progress analytics deployed on Vercel.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check text-cyan"></i> Full-stack web application with responsive UI and micro-learning modules.</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Interactive assessment quizzes and progress visualization metrics.</li>
+                        <li><i class="fa-solid fa-check text-cyan"></i> Deployed on Vercel with automated continuous delivery.</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>JavaScript</span>
+                        <span>React / Next.js</span>
+                        <span>Full-Stack</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Voice Sentiment Analysis -->
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fa-solid fa-microphone-lines text-purple"></i></div>
+                        <div class="project-links">
+                            <a href="https://voice-sentiment12.vercel.app/" target="_blank" class="icon-link" title="Open Live App"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/Amanvarma2231/Voice-Sentiment12" target="_blank" class="icon-link" title="View GitHub Repo"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Voice & Speech Sentiment Analysis</h3>
+                    <p class="project-desc">
+                        Audio processing and NLP AI system that analyzes voice recordings to classify emotional tone, speech sentiment polarity, and acoustics metrics.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check text-purple"></i> Extracted acoustic features and audio sentiment indicators from speech input.</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Real-time speech-to-text sentiment evaluation model.</li>
+                        <li><i class="fa-solid fa-check text-purple"></i> Deployed web application hosted on Vercel cloud infrastructure.</li>
+                    </ul>
+                    <div class="project-tech-stack">
+                        <span>Python</span>
+                        <span>Speech AI</span>
+                        <span>Audio NLP</span>
+                        <span>Sentiment Analysis</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certifications & Research Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">ACHIEVEMENTS</span>
+                <h2 class="section-title">Certifications & Research Papers</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="cert-grid">
+                
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award text-yellow"></i></div>
+                    <div class="cert-details">
+                        <h3>Python Programming Certification</h3>
+                        <p class="cert-issuer">Infosys Springboard</p>
+                        <p class="text-muted">Mastery of core Python programming, object-oriented principles, data structures, and algorithmic logic.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-chart-line text-cyan"></i></div>
+                    <div class="cert-details">
+                        <h3>Quantitative Research Job Simulation</h3>
+                        <p class="cert-issuer">JPMorgan</p>
+                        <p class="text-muted">Analyzed financial data models, quantitative metrics, and algorithmic risk simulation models.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-scroll text-purple"></i></div>
+                    <div class="cert-details">
+                        <h3>Conference Paper Presentation (NGAISL-2026)</h3>
+                        <p class="cert-issuer">HRIT University (April 2026)</p>
+                        <p class="text-muted">Presented paper: <em>"Adaptive Residual-Energy Threshold LEACH for Performance & Energy Efficiency"</em>.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Build Something Extraordinary</h2>
+                <p class="section-desc">Open for Python Developer, Backend Engineer, and GenAI / NLP roles.</p>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="contact-grid">
+                
+                <!-- Contact Direct Info -->
+                <div class="glass-card contact-info-card">
+                    <h3>Contact Information</h3>
+                    <p class="text-muted">Feel free to reach out directly via email, phone, or LinkedIn.</p>
+
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="method-label">Email</span>
+                                <a href="mailto:amangurauli@gmail.com" class="method-val">amangurauli@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <span class="method-label">Mobile</span>
+                                <a href="tel:+916306572504" class="method-val">+91-6306572504</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="method-label">Location</span>
+                                <span class="method-val">Ghaziabad, Uttar Pradesh, India</span>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div>
+                                <span class="method-label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/aman-v-697771345" target="_blank" class="method-val">linkedin.com/in/aman-v-697771345</a>
+                            </div>
+                        </div>
+
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <span class="method-label">GitHub</span>
+                                <a href="https://github.com/Amanvarma2231" target="_blank" class="method-val">github.com/Amanvarma2231</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card contact-form-card">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label class="input-label">Your Name *</label>
+                                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="form-group flex-1">
+                                <label class="input-label">Your Email *</label>
+                                <input type="email" id="contact-email" class="form-control" placeholder="e.g. rahul@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label class="input-label">Subject</label>
+                            <input type="text" id="contact-subject" class="form-control" placeholder="Job Opportunity / Project Inquiry">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label class="input-label">Message *</label>
+                            <textarea id="contact-message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="btn-submit-contact" class="btn btn-primary btn-block mt-4">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message to FastAPI Backend
+                        </button>
+
+                        <div id="contact-form-response" class="mt-3"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="nav-logo">
+                    <span class="logo-code">&lt;</span>Aman Varma<span class="logo-code"> /&gt;</span>
+                </a>
+                <p class="footer-tagline">Building Next-Gen Python Backends, NLP Engines & Generative AI Solutions.</p>
+            </div>
+            <div class="footer-right">
+                <p>© 2026 Aman Varma. Built with Python, FastAPI & Vanilla Web Standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating AI Widget Trigger -->
+    <div class="floating-ai-trigger" id="floating-ai-toggle" title="Ask Aman's AI Assistant">
+        <i class="fa-solid fa-robot"></i>
+        <span class="ai-trigger-badge">AI</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/ai_playground.js"></script>
+    <script src="/static/js/api_tester.js"></script>
+</body>
+</html>
