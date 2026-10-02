@@ -562,43 +562,65 @@
     <section class="section" id="certifications">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">ACHIEVEMENTS</span>
-                <h2 class="section-title">Certifications & Research Papers</h2>
+                <span class="section-subtitle">VERIFIED CREDENTIALS</span>
+                <h2 class="section-title">Certifications & Professional Achievements</h2>
                 <div class="title-bar"></div>
             </div>
 
             <div class="cert-grid">
                 
+                <!-- Cert 1: Infosys -->
                 <div class="glass-card cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-award text-yellow"></i></div>
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/infosys_python.png" alt="Infosys Springboard Python Certificate" class="cert-img-preview">
+                    </div>
                     <div class="cert-details">
-                        <h3>Python Programming Certification</h3>
-                        <p class="cert-issuer">Infosys Springboard</p>
+                        <h3>Basics of Python Certification</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-certificate text-cyan"></i> Infosys Springboard (August 2025)</p>
                         <p class="text-muted">Mastery of core Python programming, object-oriented principles, data structures, and algorithmic logic.</p>
                     </div>
                 </div>
 
+                <!-- Cert 2: TATA GenAI -->
                 <div class="glass-card cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-chart-line text-cyan"></i></div>
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/tata_genai.png" alt="TATA GenAI Analytics Certificate" class="cert-img-preview">
+                    </div>
                     <div class="cert-details">
-                        <h3>Quantitative Research Job Simulation</h3>
-                        <p class="cert-issuer">JPMorgan</p>
-                        <p class="text-muted">Analyzed financial data models, quantitative metrics, and algorithmic risk simulation models.</p>
+                        <h3>GenAI Powered Data Analytics Simulation</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-certificate text-purple"></i> TATA & Forage (October 2025)</p>
+                        <p class="text-muted">Exploratory data analysis, risk profiling, delinquency prediction with AI, and AI-driven business strategy.</p>
                     </div>
                 </div>
 
+                <!-- Cert 3: JPMorgan -->
                 <div class="glass-card cert-card">
-                    <div class="cert-icon"><i class="fa-solid fa-scroll text-purple"></i></div>
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/jpmorgan_quant.png" alt="JPMorgan Quant Research Certificate" class="cert-img-preview">
+                    </div>
                     <div class="cert-details">
-                        <h3>Conference Paper Presentation (NGAISL-2026)</h3>
-                        <p class="cert-issuer">HRIT University (April 2026)</p>
-                        <p class="text-muted">Presented paper: <em>"Adaptive Residual-Energy Threshold LEACH for Performance & Energy Efficiency"</em>.</p>
+                        <h3>Quantitative Research Job Simulation</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-certificate text-cyan"></i> JPMorgan Chase & Co. (November 2025)</p>
+                        <p class="text-muted">Quantitative price data analysis, commodity contract pricing models, credit risk evaluation, and FICO scoring.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Udemy Cyber Security -->
+                <div class="glass-card cert-card">
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/udemy_cybersecurity.png" alt="Udemy Cyber Security Certificate" class="cert-img-preview">
+                    </div>
+                    <div class="cert-details">
+                        <h3>The Complete Cyber Security Course</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-certificate text-yellow"></i> Udemy (August 2023)</p>
+                        <p class="text-muted">Comprehensive network security, vulnerability assessment, threat analysis, and secure backend coding practices.</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -713,11 +735,28 @@
         </div>
     </footer>
 
+    <!-- Resume Viewer Modal -->
+    <div class="modal-overlay" id="resume-modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 style="color:#fff; font-size:1.1rem;"><i class="fa-solid fa-file-pdf text-cyan"></i> Aman Varma - Official Resume</h3>
+                <div style="display:flex; gap:0.5rem;">
+                    <a href="/api/download-resume" download class="btn btn-primary btn-sm"><i class="fa-solid fa-download"></i> Download PDF</a>
+                    <button class="btn btn-outline btn-sm" id="btn-close-resume-modal"><i class="fa-solid fa-xmark"></i> Close</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe src="/api/download-resume" class="resume-iframe" title="Aman Varma Resume PDF"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating AI Widget Trigger -->
     <div class="floating-ai-trigger" id="floating-ai-toggle" title="Ask Aman's AI Assistant">
         <i class="fa-solid fa-robot"></i>
         <span class="ai-trigger-badge">AI</span>
     </div>
+
 
     <!-- Scripts -->
     <script src="/static/js/app.js"></script>

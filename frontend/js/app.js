@@ -8,7 +8,37 @@ document.addEventListener('DOMContentLoaded', () => {
     checkBackendHealth();
     initContactForm();
     initFloatingWidget();
+    initResumeModal();
 });
+
+/* 5. Resume Viewer Modal */
+function initResumeModal() {
+    const overlay = document.getElementById('resume-modal-overlay');
+    const btnClose = document.getElementById('btn-close-resume-modal');
+    const openBtns = document.querySelectorAll('#btn-open-resume-modal, #btn-hero-view-resume, .btn-view-resume-trigger');
+
+    if (!overlay) return;
+
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            overlay.classList.add('active');
+        });
+    });
+
+    if (btnClose) {
+        btnClose.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    }
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+        }
+    });
+}
+
 
 /* 1. Mobile Navigation & Smooth Scroll */
 function initNavigation() {
