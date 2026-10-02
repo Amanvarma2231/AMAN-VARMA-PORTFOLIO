@@ -117,18 +117,30 @@
                     B.Tech CSE Graduate with 7+ months internship experience building scalable <span class="text-highlight">FastAPI & Flask REST APIs</span>, <span class="text-highlight">Generative AI prompt workflows</span>, <span class="text-highlight">NLP text engines</span>, and robust database architectures with MySQL & MongoDB.
                 </p>
 
-                <div class="hero-cta">
-                    <button class="btn btn-primary btn-glow btn-view-resume" id="btn-hero-view-resume">
-                        <i class="fa-solid fa-eye"></i> View Resume Online
-                    </button>
-                    <a href="/api/download-resume" download class="btn btn-secondary">
-                        <i class="fa-solid fa-file-arrow-down"></i> Download PDF
+                <div class="hero-cta" style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
+                    <!-- Position 1: Unified Resume Actions (View + Download) -->
+                    <div style="display:inline-flex; border-radius:12px; overflow:hidden; border:1px solid var(--primary-cyan); box-shadow:0 0 20px rgba(6, 182, 212, 0.3);">
+                        <button class="btn btn-primary btn-view-resume" id="btn-hero-view-resume" style="border-radius:12px 0 0 12px; border:none; padding:0.75rem 1.25rem;">
+                            <i class="fa-solid fa-eye"></i> View Resume Online
+                        </button>
+                        <a href="/api/download-resume" download class="btn" style="background:#0f172a; color:#fff; border-radius:0 12px 12px 0; border:none; border-left:1px solid rgba(6, 182, 212, 0.4); padding:0.75rem 1rem;" title="Download Official PDF Resume">
+                            <i class="fa-solid fa-download text-cyan"></i> PDF
+                        </a>
+                    </div>
+
+                    <!-- Position 2: My Projects -->
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fa-solid fa-diagram-project text-purple"></i> View My Projects
                     </a>
+
+                    <!-- Position 3: Try Live AI Studio -->
                     <a href="#ai-studio" class="btn btn-outline">
-                        <i class="fa-solid fa-brain"></i> Try Live AI Studio
+                        <i class="fa-solid fa-brain text-cyan"></i> Try Live AI Studio
                     </a>
+
+                    <!-- Position 4: Test REST APIs -->
                     <a href="#api-sandbox" class="btn btn-outline">
-                        <i class="fa-solid fa-terminal"></i> Test REST APIs
+                        <i class="fa-solid fa-terminal text-yellow"></i> Test REST APIs
                     </a>
                 </div>
 
@@ -557,6 +569,7 @@
             <div class="studio-tabs justify-center mb-4">
                 <button class="tab-btn active" data-tab="tab-nlp"><i class="fa-solid fa-brain"></i> NLP Analysis</button>
                 <button class="tab-btn" data-tab="tab-genai"><i class="fa-solid fa-bolt"></i> GenAI Prompt Engine</button>
+                <button class="tab-btn" data-tab="tab-rag"><i class="fa-solid fa-robot text-cyan"></i> Aman AI RAG Assistant</button>
             </div>
 
             <!-- Tab 1: NLP -->
@@ -609,6 +622,42 @@
                                 <i class="fa-solid fa-microchip" style="font-size:2.5rem; color:var(--accent-purple);"></i>
                                 <p>Select a task persona and prompt instruction to test live Generative AI workflows!</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: RAG Assistant -->
+            <div class="tab-content" id="tab-rag">
+                <div class="glass-card" style="padding:1rem;">
+                    <div class="chat-wrapper">
+                        <div class="chat-header">
+                            <div class="chat-avatar"><i class="fa-solid fa-bot"></i></div>
+                            <div>
+                                <h4 style="margin:0; font-size:1.05rem; color:#fff;">Aman AI Knowledge RAG Assistant</h4>
+                                <span class="status-online"><i class="fa-solid fa-circle" style="font-size:0.6rem; color:var(--accent-green);"></i> Online • Connected to FastAPI RAG API</span>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="chat-bubble bot-bubble">
+                                👋 <b>Welcome! I am Aman Varma's RAG AI Assistant.</b><br/>
+                                Ask me anything about Aman's <b>experience at Druidot Consulting</b>, <b>B.Tech degree (AKTU)</b>, <b>FastAPI/Flask skills</b>, or <b>deployed projects (NLPCRM, ContentDesk)</b>!
+                            </div>
+                        </div>
+
+                        <div class="chat-chips">
+                            <button class="chip-btn" data-query="Tell me about Aman Varma's background and experience">👨‍💻 About Aman</button>
+                            <button class="chip-btn" data-query="What projects has Aman built and deployed?">🚀 Live Projects</button>
+                            <button class="chip-btn" data-query="What are Aman's technical skills in Python and AI?">🛠️ Tech Skills</button>
+                            <button class="chip-btn" data-query="Tell me about Aman's Druidot Consulting internship">💼 Work Experience</button>
+                        </div>
+
+                        <div class="chat-input-bar">
+                            <input type="text" id="chat-user-input" class="chat-input" placeholder="Type a message or click a suggestion above..." />
+                            <button id="chat-send-btn" class="btn btn-primary btn-sm" style="padding:0 1.2rem;">
+                                <i class="fa-solid fa-paper-plane"></i> Send
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -696,15 +745,15 @@
                     </div>
                 </div>
 
-                <!-- Cert 2: TCS iON YUVA AI -->
+                <!-- Cert 2: SAP BusinessObjects IDT (Swapped to position 2) -->
                 <div class="glass-card cert-card">
                     <div class="cert-header-info">
-                        <h3 class="cert-title">YUVA AI For All Certification</h3>
-                        <p class="cert-issuer"><i class="fa-solid fa-brain text-purple"></i> TCS iON & IndiaAI (April 26, 2026)</p>
-                        <p class="text-muted cert-desc">Artificial Intelligence fundamentals, machine learning models, AI ethics, and enterprise AI implementations.</p>
+                        <h3 class="cert-title">Advanced SAP BusinessObjects IDT</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-database text-yellow"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted cert-desc">Universe modeling, aggregate & index awareness, loop resolution, contexts, and enterprise universe security profiles.</p>
                     </div>
                     <div class="cert-img-box">
-                        <img src="/static/images/certificates/cert_tcs_yuva_ai.png" alt="TCS iON YUVA AI Certificate" class="cert-img-preview">
+                        <img src="/static/images/certificates/cert_sap_businessobjects.png" alt="SAP BusinessObjects IDT Certificate" class="cert-img-preview">
                         <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View Full Certificate</div>
                     </div>
                 </div>
@@ -735,15 +784,15 @@
                     </div>
                 </div>
 
-                <!-- Cert 5: SAP BusinessObjects IDT -->
+                <!-- Cert 5: TCS iON YUVA AI (Swapped to position 5) -->
                 <div class="glass-card cert-card">
                     <div class="cert-header-info">
-                        <h3 class="cert-title">Advanced SAP BusinessObjects IDT</h3>
-                        <p class="cert-issuer"><i class="fa-solid fa-database text-yellow"></i> SAP Learning (August 20, 2026)</p>
-                        <p class="text-muted cert-desc">Universe modeling, aggregate & index awareness, loop resolution, contexts, and enterprise universe security profiles.</p>
+                        <h3 class="cert-title">YUVA AI For All Certification</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-brain text-purple"></i> TCS iON & IndiaAI (April 26, 2026)</p>
+                        <p class="text-muted cert-desc">Artificial Intelligence fundamentals, machine learning models, AI ethics, and enterprise AI implementations.</p>
                     </div>
                     <div class="cert-img-box">
-                        <img src="/static/images/certificates/cert_sap_businessobjects.png" alt="SAP BusinessObjects IDT Certificate" class="cert-img-preview">
+                        <img src="/static/images/certificates/cert_tcs_yuva_ai.png" alt="TCS iON YUVA AI Certificate" class="cert-img-preview">
                         <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View Full Certificate</div>
                     </div>
                 </div>
