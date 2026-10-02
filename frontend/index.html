@@ -26,6 +26,7 @@
     <header class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#hero" class="nav-logo">
+                <img src="/static/images/logo.jpg" alt="Aman Varma Logo" class="brand-logo-img">
                 <span class="logo-code">&lt;</span>Aman Varma<span class="logo-code"> /&gt;</span>
                 <span class="badge-role">AI & Backend</span>
             </a>
@@ -33,18 +34,16 @@
             <nav class="nav-menu" id="nav-menu">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#ai-studio" class="nav-link highlight-link"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Studio</a>
-                <a href="#api-sandbox" class="nav-link highlight-link"><i class="fa-solid fa-server"></i> API Sandbox</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#ai-studio" class="nav-link highlight-link"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Studio</a>
+                <a href="#api-sandbox" class="nav-link highlight-link"><i class="fa-solid fa-server"></i> API Sandbox</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
 
             <div class="nav-actions">
-                <div class="status-pill" id="backend-status" title="Backend FastAPI Health">
-                    <span class="status-dot"></span>
-                    <span class="status-text">FastAPI Connected</span>
-                </div>
+                <a href="/api/download-resume" download class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Resume</a>
                 <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-regular fa-paper-plane"></i> Hire Me</a>
             </div>
 
@@ -70,14 +69,14 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="#ai-studio" class="btn btn-primary btn-glow">
+                    <a href="/api/download-resume" download class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download PDF Resume
+                    </a>
+                    <a href="#ai-studio" class="btn btn-secondary">
                         <i class="fa-solid fa-brain"></i> Try Live AI Studio
                     </a>
-                    <a href="#api-sandbox" class="btn btn-secondary">
+                    <a href="#api-sandbox" class="btn btn-outline">
                         <i class="fa-solid fa-terminal"></i> Test REST APIs
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fa-solid fa-envelope"></i> Contact Aman
                     </a>
                 </div>
 
@@ -95,7 +94,7 @@
                 <div class="glass-card profile-card">
                     <div class="profile-header">
                         <div class="profile-avatar-container">
-                            <img src="/static/images/profile.png" alt="Aman Varma" class="profile-avatar-img">
+                            <img src="/static/images/profile_professional.jpg" alt="Aman Varma Professional Portrait" class="profile-avatar-img">
                         </div>
                         <div class="profile-meta">
                             <h3>Aman Varma</h3>
@@ -109,6 +108,7 @@
                             </div>
                         </div>
                     </div>
+
 
 
                     <div class="code-preview">
@@ -201,205 +201,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Live Interactive AI Studio Section -->
-    <section class="section ai-studio-section" id="ai-studio">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">LIVE DEMONSTRATION</span>
-                <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles text-cyan"></i> Interactive AI & NLP Studio</h2>
-                <p class="section-desc">Test Aman Varma's backend AI models, NLP analyzers, and RAG assistant live in your browser.</p>
-                <div class="title-bar"></div>
-            </div>
-
-            <!-- Studio Tabs Header -->
-            <div class="studio-tabs">
-                <button class="tab-btn active" data-tab="tab-nlp">
-                    <i class="fa-solid fa-align-left"></i> Live NLP Analyzer
-                </button>
-                <button class="tab-btn" data-tab="tab-genai">
-                    <i class="fa-solid fa-sliders"></i> GenAI Prompt Studio
-                </button>
-                <button class="tab-btn" data-tab="tab-rag">
-                    <i class="fa-solid fa-comments"></i> Aman AI Assistant (RAG)
-                </button>
-            </div>
-
-            <!-- Studio Content Area -->
-            <div class="glass-card studio-container">
-
-                <!-- Tab 1: Live NLP Analyzer -->
-                <div class="tab-content active" id="tab-nlp">
-                    <div class="nlp-grid">
-                        <div class="nlp-input-col">
-                            <label class="input-label"><i class="fa-solid fa-pen-to-square"></i> Input Text for NLP & Content Desk Scoring:</label>
-                            <textarea id="nlp-input" class="form-control" rows="6" placeholder="Enter text to analyze sentiment, TF-IDF keywords, entities, and ContentDesk SEO score...">FastAPI combined with Generative AI and NLP workflows delivers exceptional, high-performance microservices. Aman Varma engineered 25+ RESTful endpoints at Druidot Consulting to streamline AI data pipelines and automated testing.</textarea>
-                            
-                            <div class="preset-buttons">
-                                <span class="preset-label">Sample Presets:</span>
-                                <button type="button" class="btn-preset" id="preset-tech">Tech Article</button>
-                                <button type="button" class="btn-preset" id="preset-crm">Customer Feedback</button>
-                                <button type="button" class="btn-preset" id="preset-clear">Clear</button>
-                            </div>
-
-                            <button id="btn-run-nlp" class="btn btn-primary btn-block mt-3">
-                                <i class="fa-solid fa-play"></i> Run NLP Analysis
-                            </button>
-                        </div>
-
-                        <div class="nlp-output-col">
-                            <div class="output-box" id="nlp-results">
-                                <div class="empty-state">
-                                    <i class="fa-solid fa-chart-pie"></i>
-                                    <p>Click "Run NLP Analysis" to see live results!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 2: GenAI Prompt Studio -->
-                <div class="tab-content" id="tab-genai">
-                    <div class="genai-grid">
-                        <div class="genai-controls">
-                            <div class="form-group">
-                                <label class="input-label">System Instruction Persona:</label>
-                                <select id="genai-system" class="form-control">
-                                    <option value="You are a Senior Python Backend Architect specializing in FastAPI and LLM systems.">Python Backend Architect</option>
-                                    <option value="You are an AI & NLP Data Engineer explaining TF-IDF and prompt tuning.">NLP & Data Specialist</option>
-                                    <option value="You are a Technical Hiring Manager evaluating Aman Varma's portfolio.">Technical Recruiter</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group mt-3">
-                                <label class="input-label">Temperature: <span id="temp-val" class="text-cyan font-bold">0.7</span></label>
-                                <input type="range" id="genai-temp" min="0.0" max="1.5" step="0.1" value="0.7" class="range-slider">
-                                <div class="range-labels">
-                                    <span>Precise (0.0)</span>
-                                    <span>Balanced (0.7)</span>
-                                    <span>Creative (1.5)</span>
-                                </div>
-                            </div>
-
-                            <div class="form-group mt-3">
-                                <label class="input-label">Prompt Input:</label>
-                                <textarea id="genai-prompt-text" class="form-control" rows="4" placeholder="Ask a question about Python FastAPI, LLM integration, or microservices architecture...">Explain how FastAPI handles async requests and integrates with Generative AI prompt pipelines.</textarea>
-                            </div>
-
-                            <button id="btn-run-genai" class="btn btn-primary btn-block mt-3">
-                                <i class="fa-solid fa-sparkles"></i> Generate AI Response
-                            </button>
-                        </div>
-
-                        <div class="genai-output">
-                            <div class="code-preview genai-preview">
-                                <div class="code-header">
-                                    <span class="code-title"><i class="fa-solid fa-microchip"></i> Model Output: Aman-GenAI-Studio-v1.0</span>
-                                    <span class="token-badge" id="token-count">0 Tokens</span>
-                                </div>
-                                <div id="genai-output-box" class="genai-response-body">
-                                    <p class="text-muted">Generated response will appear here...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 3: Aman AI Assistant (RAG Chatbot) -->
-                <div class="tab-content" id="tab-rag">
-                    <div class="chat-wrapper">
-                        <div class="chat-header">
-                            <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
-                            <div>
-                                <h4>Aman Varma RAG Assistant</h4>
-                                <span class="status-online"><i class="fa-solid fa-circle"></i> Trained on Aman's Resume & Projects</span>
-                            </div>
-                        </div>
-
-                        <div class="chat-messages" id="chat-messages">
-                            <div class="chat-bubble bot-bubble">
-                                👋 Hi! I'm Aman Varma's AI Assistant. Ask me anything about Aman's experience at Druidot Consulting, B.Tech CSE degree, Python/FastAPI skills, or NLPCRM & ContentDesk projects!
-                            </div>
-                        </div>
-
-                        <div class="chat-chips">
-                            <button class="chip-btn" data-query="Tell me about Aman's background">Summary</button>
-                            <button class="chip-btn" data-query="What experience does Aman have at Druidot Consulting?">Experience</button>
-                            <button class="chip-btn" data-query="What projects has Aman built?">Projects</button>
-                            <button class="chip-btn" data-query="What is Aman's tech stack?">Skills</button>
-                        </div>
-
-                        <div class="chat-input-bar">
-                            <input type="text" id="chat-user-input" class="chat-input" placeholder="Type a message (e.g., 'What are Aman's Python & GenAI skills?')...">
-                            <button id="chat-send-btn" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive REST API Sandbox Section -->
-    <section class="section api-sandbox-section" id="api-sandbox">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">PROJECT LIVE DEMO</span>
-                <h2 class="section-title"><i class="fa-solid fa-server text-cyan"></i> Interactive REST API Sandbox</h2>
-                <p class="section-desc">Test live RESTful endpoints designed by Aman Varma for the <strong>NLPCRM</strong> project (25+ Endpoints Architecture).</p>
-                <div class="title-bar"></div>
-            </div>
-
-            <div class="glass-card api-sandbox-card">
-                <div class="sandbox-controls">
-                    <div class="control-row">
-                        <div class="control-group flex-1">
-                            <label class="input-label">Select Endpoint:</label>
-                            <select id="api-endpoint-select" class="form-control">
-                                <option value="get_contacts">GET /api/v1/contacts (List Contacts)</option>
-                                <option value="post_contact">POST /api/v1/contacts (Create Contact)</option>
-                                <option value="post_nlp_classify">POST /api/v1/nlp/classify-intent (NLP Intent Classification)</option>
-                                <option value="post_auth_login">POST /api/v1/auth/login (JWT Auth Token)</option>
-                                <option value="get_analytics">GET /api/v1/analytics/overview (CRM Metrics)</option>
-                            </select>
-                        </div>
-                        <button id="btn-send-api" class="btn btn-primary btn-send-request">
-                            <i class="fa-solid fa-paper-plane"></i> Send Request
-                        </button>
-                    </div>
-
-                    <div class="endpoint-meta-bar" id="endpoint-meta">
-                        <span class="method-badge method-get">GET</span>
-                        <span class="path-display">/api/v1/contacts</span>
-                        <span class="endpoint-desc text-muted">Retrieves paginated list of CRM contacts with optional search filter.</span>
-                    </div>
-                </div>
-
-                <div class="sandbox-panes">
-                    <!-- Request Pane -->
-                    <div class="pane request-pane">
-                        <div class="pane-header">Request Payload (JSON)</div>
-                        <textarea id="api-request-body" class="form-control code-font" rows="8" placeholder="Request body JSON..."></textarea>
-                    </div>
-
-                    <!-- Response Pane -->
-                    <div class="pane response-pane">
-                        <div class="pane-header">
-                            <span>Response Output</span>
-                            <div class="response-status-group">
-                                <span id="res-status-badge" class="badge badge-success">200 OK</span>
-                                <span id="res-latency" class="badge badge-info"><i class="fa-solid fa-stopwatch"></i> -- ms</span>
-                            </div>
-                        </div>
-                        <pre id="api-response-body" class="code-preview-box"><code>Click "Send Request" to test endpoint...</code></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Skills Matrix -->
+    <!-- Technical Skills Matrix Section -->
     <section class="section" id="skills">
         <div class="container">
             <div class="section-header">
@@ -438,6 +240,7 @@
                         <span class="skill-pill">Prompt Engineering</span>
                         <span class="skill-pill">LLMs</span>
                         <span class="skill-pill">TF-IDF Vectorization</span>
+                        <span class="skill-pill">Speech AI</span>
                     </div>
                 </div>
 
@@ -480,8 +283,8 @@
                         <span class="skill-pill">MySQL</span>
                         <span class="skill-pill">MongoDB</span>
                         <span class="skill-pill">SQLite</span>
-                        <span class="skill-pill">CRUD Operations</span>
-                        <span class="skill-pill">Data Persistence</span>
+                        <span class="skill-pill">Data Warehousing</span>
+                        <span class="skill-pill">ETL Pipelines</span>
                     </div>
                 </div>
 
@@ -496,8 +299,8 @@
                         <span class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</span>
                         <span class="skill-pill">CI/CD</span>
                         <span class="skill-pill">GitHub Actions</span>
-                        <span class="skill-pill">Manual Testing</span>
-                        <span class="skill-pill">Debugging</span>
+                        <span class="skill-pill">Render</span>
+                        <span class="skill-pill">Vercel</span>
                     </div>
                 </div>
 
@@ -507,6 +310,7 @@
 
     <!-- Experience & Education Section -->
     <section class="section" id="experience">
+
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">CAREER PATH</span>
@@ -741,6 +545,202 @@
 
             </div>
 
+        </div>
+    </section>
+
+    <!-- Live Interactive AI Studio Section -->
+    <section class="section ai-studio-section" id="ai-studio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">LIVE DEMONSTRATION</span>
+                <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles text-cyan"></i> Interactive AI & NLP Studio</h2>
+                <p class="section-desc">Test Aman Varma's backend AI models, NLP analyzers, and RAG assistant live in your browser.</p>
+                <div class="title-bar"></div>
+            </div>
+
+            <!-- Studio Tabs Header -->
+            <div class="studio-tabs">
+                <button class="tab-btn active" data-tab="tab-nlp">
+                    <i class="fa-solid fa-align-left"></i> Live NLP Analyzer
+                </button>
+                <button class="tab-btn" data-tab="tab-genai">
+                    <i class="fa-solid fa-sliders"></i> GenAI Prompt Studio
+                </button>
+                <button class="tab-btn" data-tab="tab-rag">
+                    <i class="fa-solid fa-comments"></i> Aman AI Assistant (RAG)
+                </button>
+            </div>
+
+            <!-- Studio Content Area -->
+            <div class="glass-card studio-container">
+
+                <!-- Tab 1: Live NLP Analyzer -->
+                <div class="tab-content active" id="tab-nlp">
+                    <div class="nlp-grid">
+                        <div class="nlp-input-col">
+                            <label class="input-label"><i class="fa-solid fa-pen-to-square"></i> Input Text for NLP & Content Desk Scoring:</label>
+                            <textarea id="nlp-input" class="form-control" rows="6" placeholder="Enter text to analyze sentiment, TF-IDF keywords, entities, and ContentDesk SEO score...">FastAPI combined with Generative AI and NLP workflows delivers exceptional, high-performance microservices. Aman Varma engineered 25+ RESTful endpoints at Druidot Consulting to streamline AI data pipelines and automated testing.</textarea>
+                            
+                            <div class="preset-buttons">
+                                <span class="preset-label">Sample Presets:</span>
+                                <button type="button" class="btn-preset" id="preset-tech">Tech Article</button>
+                                <button type="button" class="btn-preset" id="preset-crm">Customer Feedback</button>
+                                <button type="button" class="btn-preset" id="preset-clear">Clear</button>
+                            </div>
+
+                            <button id="btn-run-nlp" class="btn btn-primary btn-block mt-3">
+                                <i class="fa-solid fa-play"></i> Run NLP Analysis
+                            </button>
+                        </div>
+
+                        <div class="nlp-output-col">
+                            <div class="output-box" id="nlp-results">
+                                <div class="empty-state">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <p>Click "Run NLP Analysis" to see live results!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: GenAI Prompt Studio -->
+                <div class="tab-content" id="tab-genai">
+                    <div class="genai-grid">
+                        <div class="genai-controls">
+                            <div class="form-group">
+                                <label class="input-label">System Instruction Persona:</label>
+                                <select id="genai-system" class="form-control">
+                                    <option value="You are a Senior Python Backend Architect specializing in FastAPI and LLM systems.">Python Backend Architect</option>
+                                    <option value="You are an AI & NLP Data Engineer explaining TF-IDF and prompt tuning.">NLP & Data Specialist</option>
+                                    <option value="You are a Technical Hiring Manager evaluating Aman Varma's portfolio.">Technical Recruiter</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label class="input-label">Temperature: <span id="temp-val" class="text-cyan font-bold">0.7</span></label>
+                                <input type="range" id="genai-temp" min="0.0" max="1.5" step="0.1" value="0.7" class="range-slider">
+                                <div class="range-labels">
+                                    <span>Precise (0.0)</span>
+                                    <span>Balanced (0.7)</span>
+                                    <span>Creative (1.5)</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label class="input-label">Prompt Input:</label>
+                                <textarea id="genai-prompt-text" class="form-control" rows="4" placeholder="Ask a question about Python FastAPI, LLM integration, or microservices architecture...">Explain how FastAPI handles async requests and integrates with Generative AI prompt pipelines.</textarea>
+                            </div>
+
+                            <button id="btn-run-genai" class="btn btn-primary btn-block mt-3">
+                                <i class="fa-solid fa-sparkles"></i> Generate AI Response
+                            </button>
+                        </div>
+
+                        <div class="genai-output">
+                            <div class="code-preview genai-preview">
+                                <div class="code-header">
+                                    <span class="code-title"><i class="fa-solid fa-microchip"></i> Model Output: Aman-GenAI-Studio-v1.0</span>
+                                    <span class="token-badge" id="token-count">0 Tokens</span>
+                                </div>
+                                <div id="genai-output-box" class="genai-response-body">
+                                    <p class="text-muted">Generated response will appear here...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Aman AI Assistant (RAG Chatbot) -->
+                <div class="tab-content" id="tab-rag">
+                    <div class="chat-wrapper">
+                        <div class="chat-header">
+                            <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <h4>Aman Varma RAG Assistant</h4>
+                                <span class="status-online"><i class="fa-solid fa-circle"></i> Trained on Aman's Resume & Projects</span>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="chat-bubble bot-bubble">
+                                👋 Hi! I'm Aman Varma's AI Assistant. Ask me anything about Aman's experience at Druidot Consulting, B.Tech CSE degree, Python/FastAPI skills, or NLPCRM & ContentDesk projects!
+                            </div>
+                        </div>
+
+                        <div class="chat-chips">
+                            <button class="chip-btn" data-query="Tell me about Aman's background">Summary</button>
+                            <button class="chip-btn" data-query="What experience does Aman have at Druidot Consulting?">Experience</button>
+                            <button class="chip-btn" data-query="What projects has Aman built?">Projects</button>
+                            <button class="chip-btn" data-query="What is Aman's tech stack?">Skills</button>
+                        </div>
+
+                        <div class="chat-input-bar">
+                            <input type="text" id="chat-user-input" class="chat-input" placeholder="Type a message (e.g., 'What are Aman's Python & GenAI skills?')...">
+                            <button id="chat-send-btn" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive REST API Sandbox Section -->
+    <section class="section api-sandbox-section" id="api-sandbox">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PROJECT LIVE DEMO</span>
+                <h2 class="section-title"><i class="fa-solid fa-server text-cyan"></i> Interactive REST API Sandbox</h2>
+                <p class="section-desc">Test live RESTful endpoints designed by Aman Varma for the <strong>NLPCRM</strong> project (25+ Endpoints Architecture).</p>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="glass-card api-sandbox-card">
+                <div class="sandbox-controls">
+                    <div class="control-row">
+                        <div class="control-group flex-1">
+                            <label class="input-label">Select Endpoint:</label>
+                            <select id="api-endpoint-select" class="form-control">
+                                <option value="get_contacts">GET /api/v1/contacts (List Contacts)</option>
+                                <option value="post_contact">POST /api/v1/contacts (Create Contact)</option>
+                                <option value="post_nlp_classify">POST /api/v1/nlp/classify-intent (NLP Intent Classification)</option>
+                                <option value="post_auth_login">POST /api/v1/auth/login (JWT Auth Token)</option>
+                                <option value="get_analytics">GET /api/v1/analytics/overview (CRM Metrics)</option>
+                            </select>
+                        </div>
+                        <button id="btn-send-api" class="btn btn-primary btn-send-request">
+                            <i class="fa-solid fa-paper-plane"></i> Send Request
+                        </button>
+                    </div>
+
+                    <div class="endpoint-meta-bar" id="endpoint-meta">
+                        <span class="method-badge method-get">GET</span>
+                        <span class="path-display">/api/v1/contacts</span>
+                        <span class="endpoint-desc text-muted">Retrieves paginated list of CRM contacts with optional search filter.</span>
+                    </div>
+                </div>
+
+                <div class="sandbox-panes">
+                    <!-- Request Pane -->
+                    <div class="pane request-pane">
+                        <div class="pane-header">Request Payload (JSON)</div>
+                        <textarea id="api-request-body" class="form-control code-font" rows="8" placeholder="Request body JSON..."></textarea>
+                    </div>
+
+                    <!-- Response Pane -->
+                    <div class="pane response-pane">
+                        <div class="pane-header">
+                            <span>Response Output</span>
+                            <div class="response-status-group">
+                                <span id="res-status-badge" class="badge badge-success">200 OK</span>
+                                <span id="res-latency" class="badge badge-info"><i class="fa-solid fa-stopwatch"></i> -- ms</span>
+                            </div>
+                        </div>
+                        <pre id="api-response-body" class="code-preview-box"><code>Click "Send Request" to test endpoint...</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

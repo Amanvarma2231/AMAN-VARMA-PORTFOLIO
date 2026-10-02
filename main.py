@@ -57,6 +57,18 @@ async def health_check():
 async def get_profile():
     return AMAN_PROFILE
 
+@app.get("/api/download-resume")
+async def download_resume():
+    resume_path = os.path.join(os.path.dirname(__file__), "frontend", "assets", "Aman_Varma_Resume.pdf")
+    if os.path.exists(resume_path):
+        return FileResponse(
+            path=resume_path,
+            filename="Aman_Varma_Resume.pdf",
+            media_type="application/pdf"
+        )
+    raise HTTPException(status_code=404, detail="Resume file not found.")
+
+
 @app.post("/api/contact")
 async def handle_contact(msg: ContactMessage):
     result = save_contact_message(msg)
