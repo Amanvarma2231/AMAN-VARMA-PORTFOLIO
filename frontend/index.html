@@ -632,30 +632,40 @@
                     <div class="control-row">
                         <div class="flex-1">
                             <label class="input-label">Select API Endpoint:</label>
-                            <select id="sandbox-endpoint-select" class="form-control">
-                                <option value="GET /api/health">GET /api/health — System Status</option>
-                                <option value="GET /api/profile">GET /api/profile — Aman Varma Engineering Profile</option>
-                                <option value="GET /api/download-resume">GET /api/download-resume — PDF Resume Stream</option>
-                                <option value="POST /api/ai/nlp-analyze">POST /api/ai/nlp-analyze — Live NLP Pipeline</option>
-                                <option value="POST /api/ai/genai-prompt">POST /api/ai/genai-prompt — GenAI Prompt Execution</option>
+                            <select id="api-endpoint-select" class="form-control">
+                                <option value="get_contacts">GET /api/v1/contacts — List All Contacts</option>
+                                <option value="post_contact">POST /api/v1/contacts — Create CRM Contact</option>
+                                <option value="post_nlp_classify">POST /api/v1/nlp/classify-intent — Classify Intent (NLP)</option>
+                                <option value="post_auth_login">POST /api/v1/auth/login — JWT Token Generation</option>
+                                <option value="get_analytics">GET /api/v1/analytics/overview — CRM Analytics Overview</option>
                             </select>
                         </div>
-                        <button id="btn-execute-sandbox" class="btn btn-primary" style="height:44px;">
+                        <button id="btn-send-api" class="btn btn-primary" style="height:44px; padding:0 1.5rem;">
                             <i class="fa-solid fa-paper-plane"></i> Send Request
                         </button>
+                    </div>
+
+                    <div class="endpoint-meta-bar" id="endpoint-meta">
+                        <!-- JS populated metadata -->
                     </div>
                 </div>
 
                 <div class="sandbox-panes">
-                    <div>
-                        <div class="input-label mb-1">Request Payload (JSON):</div>
-                        <textarea id="sandbox-request-body" class="form-control code-font" rows="8" readonly>{
-  "info": "GET request requires no payload"
-}</textarea>
+                    <div class="pane">
+                        <div class="pane-header">
+                            <span><i class="fa-solid fa-code text-cyan"></i> Request Body (JSON)</span>
+                        </div>
+                        <textarea id="api-request-body" class="form-control code-preview-box" rows="8" style="border-radius:0 0 10px 10px;"></textarea>
                     </div>
-                    <div>
-                        <div class="input-label mb-1">Response Payload (JSON):</div>
-                        <pre id="sandbox-response-body" class="output-code-box"><code>Click "Send Request" to trigger live FastAPI endpoint!</code></pre>
+                    <div class="pane">
+                        <div class="pane-header">
+                            <span><i class="fa-solid fa-terminal text-green"></i> Response Body (JSON)</span>
+                            <div style="display:flex; gap:0.5rem; align-items:center;">
+                                <span id="res-status-badge" class="badge"></span>
+                                <span id="res-latency" style="font-size:0.75rem; color:var(--text-muted);"></span>
+                            </div>
+                        </div>
+                        <pre id="api-response-body" class="code-preview-box" style="margin:0; border-radius:0 0 10px 10px; white-space:pre-wrap;"><code>Click "Send Request" to trigger live API execution!</code></pre>
                     </div>
                 </div>
             </div>
