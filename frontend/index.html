@@ -49,7 +49,8 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="/api/download-resume" download class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Resume</a>
+                <button class="btn btn-outline btn-sm btn-view-resume" id="btn-open-resume-modal"><i class="fa-solid fa-eye text-cyan"></i> View Resume</button>
+                <a href="/api/download-resume" download class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Download</a>
                 <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-regular fa-paper-plane"></i> Hire Me</a>
             </div>
 
@@ -75,10 +76,13 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="/api/download-resume" download class="btn btn-primary btn-glow">
-                        <i class="fa-solid fa-file-arrow-down"></i> Download PDF Resume
+                    <button class="btn btn-primary btn-glow btn-view-resume" id="btn-hero-view-resume">
+                        <i class="fa-solid fa-eye"></i> View Resume Online
+                    </button>
+                    <a href="/api/download-resume" download class="btn btn-secondary">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download PDF
                     </a>
-                    <a href="#ai-studio" class="btn btn-secondary">
+                    <a href="#ai-studio" class="btn btn-outline">
                         <i class="fa-solid fa-brain"></i> Try Live AI Studio
                     </a>
                     <a href="#api-sandbox" class="btn btn-outline">
@@ -569,10 +573,76 @@
 
             <div class="cert-grid">
                 
-                <!-- Cert 1: Infosys -->
+                <!-- Cert 1: HRIT Research Paper -->
+                <div class="glass-card cert-card">
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_hrit_research.png" alt="HRIT Research Paper Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
+                    </div>
+                    <div class="cert-details">
+                        <h3>National Conference Research Achievement</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-file-contract text-cyan"></i> HRIT University (April 4, 2026)</p>
+                        <p class="text-muted">Paper: <i>"Adaptive Residual - Energy Threshold LEACH for Performance & Energy Efficiency"</i> presented at NGAISL-2026.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2: TCS iON YUVA AI -->
+                <div class="glass-card cert-card">
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_tcs_yuva_ai.png" alt="TCS iON YUVA AI Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
+                    </div>
+                    <div class="cert-details">
+                        <h3>YUVA AI For All Certification</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-brain text-purple"></i> TCS iON & IndiaAI (April 26, 2026)</p>
+                        <p class="text-muted">Artificial Intelligence fundamentals, machine learning models, AI ethics, and enterprise AI implementations.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3: SAP Cloud ERP Onboarding -->
+                <div class="glass-card cert-card">
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_sap_cloud_onboarding.png" alt="SAP Cloud ERP Onboarding Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Cloud Onboarding for SAP Cloud ERP</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-cloud text-cyan"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted">SAP Cloud ERP architecture, SAP Activate framework, Cloud ALM, cutover strategy, and enterprise implementation.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Exploring SAP Cloud ERP -->
+                <div class="glass-card cert-card">
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_sap_exploring_erp.png" alt="Exploring SAP Cloud ERP Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Exploring SAP Cloud ERP</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-layer-group text-purple"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted">Cloud ERP solutions, RISE and GROW with SAP, SAP Clean Core architecture, and business process integration.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 5: SAP BusinessObjects IDT -->
+                <div class="glass-card cert-card">
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_sap_businessobjects.png" alt="SAP BusinessObjects IDT Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Advanced SAP BusinessObjects IDT</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-database text-yellow"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted">Universe modeling, aggregate & index awareness, loop resolution, contexts, and enterprise universe security profiles.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 6: Infosys Python -->
                 <div class="glass-card cert-card">
                     <div class="cert-img-box">
                         <img src="/static/images/certificates/infosys_python.png" alt="Infosys Springboard Python Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
                     </div>
                     <div class="cert-details">
                         <h3>Basics of Python Certification</h3>
@@ -581,10 +651,11 @@
                     </div>
                 </div>
 
-                <!-- Cert 2: TATA GenAI -->
+                <!-- Cert 7: TATA GenAI -->
                 <div class="glass-card cert-card">
                     <div class="cert-img-box">
                         <img src="/static/images/certificates/tata_genai.png" alt="TATA GenAI Analytics Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
                     </div>
                     <div class="cert-details">
                         <h3>GenAI Powered Data Analytics Simulation</h3>
@@ -593,10 +664,11 @@
                     </div>
                 </div>
 
-                <!-- Cert 3: JPMorgan -->
+                <!-- Cert 8: JPMorgan Quant -->
                 <div class="glass-card cert-card">
                     <div class="cert-img-box">
                         <img src="/static/images/certificates/jpmorgan_quant.png" alt="JPMorgan Quant Research Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
                     </div>
                     <div class="cert-details">
                         <h3>Quantitative Research Job Simulation</h3>
@@ -605,14 +677,15 @@
                     </div>
                 </div>
 
-                <!-- Cert 4: Udemy Cyber Security -->
+                <!-- Cert 9: Udemy Cyber Security -->
                 <div class="glass-card cert-card">
                     <div class="cert-img-box">
                         <img src="/static/images/certificates/udemy_cybersecurity.png" alt="Udemy Cyber Security Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View</div>
                     </div>
                     <div class="cert-details">
                         <h3>The Complete Cyber Security Course</h3>
-                        <p class="cert-issuer"><i class="fa-solid fa-certificate text-yellow"></i> Udemy (August 2023)</p>
+                        <p class="cert-issuer"><i class="fa-solid fa-shield-halved text-yellow"></i> Udemy (August 2023)</p>
                         <p class="text-muted">Comprehensive network security, vulnerability assessment, threat analysis, and secure backend coding practices.</p>
                     </div>
                 </div>
@@ -747,6 +820,20 @@
             </div>
             <div class="modal-body">
                 <iframe src="/api/download-resume" class="resume-iframe" title="Aman Varma Resume PDF"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="modal-overlay" id="cert-modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="cert-modal-title" style="color:#fff; font-size:1.1rem;"><i class="fa-solid fa-award text-yellow"></i> Verified Certificate</h3>
+                <button class="btn btn-outline btn-sm" id="btn-close-cert-modal"><i class="fa-solid fa-xmark"></i> Close</button>
+            </div>
+            <div class="modal-body">
+                <img id="cert-modal-img" src="" alt="Certificate View" class="cert-modal-img">
+                <p id="cert-modal-caption" class="text-muted mt-3" style="font-size:0.95rem; font-weight:600; text-align:center;"></p>
             </div>
         </div>
     </div>

@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initFloatingWidget();
     initResumeModal();
+    initCertModal();
 });
 
 /* 5. Resume Viewer Modal */
 function initResumeModal() {
     const overlay = document.getElementById('resume-modal-overlay');
     const btnClose = document.getElementById('btn-close-resume-modal');
-    const openBtns = document.querySelectorAll('#btn-open-resume-modal, #btn-hero-view-resume, .btn-view-resume-trigger');
+    const openBtns = document.querySelectorAll('#btn-open-resume-modal, #btn-hero-view-resume, .btn-view-resume-trigger, .btn-view-resume, [data-action="view-resume"]');
 
     if (!overlay) return;
 
@@ -35,6 +36,48 @@ function initResumeModal() {
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
             overlay.classList.remove('active');
+        }
+    });
+}
+
+/* 6. Certificate Lightbox Modal */
+function initCertModal() {
+    const certOverlay = document.getElementById('cert-modal-overlay');
+    const certModalImg = document.getElementById('cert-modal-img');
+    const certModalTitle = document.getElementById('cert-modal-title');
+    const certModalCaption = document.getElementById('cert-modal-caption');
+    const btnCloseCert = document.getElementById('btn-close-cert-modal');
+
+    if (!certOverlay) return;
+
+    const certCards = document.querySelectorAll('.cert-card, .btn-view-cert');
+    certCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Find image src & details
+            const imgEl = card.querySelector('img') || card.closest('.cert-card')?.querySelector('img');
+            const titleEl = card.querySelector('h3') || card.closest('.cert-card')?.querySelector('h3');
+            const issuerEl = card.querySelector('.cert-issuer') || card.closest('.cert-card')?.querySelector('.cert-issuer');
+            
+            if (imgEl && certModalImg) {
+                certModalImg.src = imgEl.src;
+                if (certModalTitle) certModalTitle.innerHTML = `<i class="fa-solid fa-award text-yellow"></i> ${titleEl ? titleEl.textContent : 'Certificate View'}`;
+                if (certModalCaption) certModalCaption.textContent = issuerEl ? issuerEl.textContent : 'Official Issued Certificate';
+                certOverlay.classList.add('active');
+            }
+        });
+    });
+
+    if (btnCloseCert) {
+        btnCloseCert.addEventListener('click', () => {
+            certOverlay.classList.remove('active');
+        });
+    }
+
+    certOverlay.addEventListener('click', (e) => {
+        if (e.target === certOverlay) {
+            certOverlay.classList.remove('active');
         }
     });
 }
