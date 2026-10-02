@@ -3,23 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman Varma | Python Backend, GenAI & NLP Engineer</title>
-    <meta name="description" content="Portfolio of Aman Varma - Python Developer Intern specializing in FastAPI, Flask, REST APIs, Generative AI, LLMs, NLP, MySQL, and Docker.">
-    
+    <title>Aman Varma | Python & Backend Engineer Portfolio | FastAPI, Flask, GenAI</title>
+    <meta name="description" content="Official portfolio of Aman Varma - Python Developer Intern specializing in FastAPI, Flask, REST APIs, Generative AI, LLMs, NLP, MySQL, MongoDB, and Docker. B.Tech CSE Graduate from AKTU.">
+    <meta name="keywords" content="Aman Varma, Aman Varma Python, Aman Varma Backend, Aman Varma Portfolio, Aman Varma Druidot Consulting, Python Developer, FastAPI Engineer, GenAI Developer, Ghaziabad Python Developer">
+    <meta name="author" content="Aman Varma">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://127.0.0.1:8000">
+
+    <!-- Open Graph / Facebook / LinkedIn SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aman Varma | Python & Backend Engineer Portfolio">
+    <meta property="og:description" content="Python Developer Intern specializing in FastAPI, Flask, REST APIs, Generative AI, NLP, and database architectures.">
+    <meta property="og:image" content="/static/images/profile_professional.jpg">
+    <meta property="og:url" content="http://127.0.0.1:8000">
+
+    <!-- Twitter Card SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aman Varma | Python & Backend Engineer Portfolio">
+    <meta name="twitter:description" content="Python Developer Intern specializing in FastAPI, Flask, REST APIs, Generative AI, NLP, and database architectures.">
+    <meta name="twitter:image" content="/static/images/profile_professional.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aman Varma",
+      "jobTitle": "Python & AI Backend Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Druidot Consulting"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "NITRA Technical Campus, AKTU"
+      },
+      "email": "amangurauli@gmail.com",
+      "telephone": "+91-6306572504",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ghaziabad",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "India"
+      },
+      "url": "http://127.0.0.1:8000",
+      "sameAs": [
+        "https://github.com/Amanvarma2231",
+        "https://www.linkedin.com/in/aman-v-697771345"
+      ]
+    }
+    </script>
+
     <!-- Google Fonts & FontAwesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- React 18 & Babel Standalone -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/styles.css">
-
 </head>
 <body class="dark-theme">
 
@@ -34,7 +76,7 @@
             <a href="#hero" class="nav-logo">
                 <img src="/static/images/logo.jpg" alt="Aman Varma Logo" class="brand-logo-img">
                 <span class="logo-code">&lt;</span>Aman Varma<span class="logo-code"> /&gt;</span>
-                <span class="badge-role">AI & Backend</span>
+                <span class="badge-role">Python & Backend</span>
             </a>
 
             <nav class="nav-menu" id="nav-menu">
@@ -77,16 +119,16 @@
 
                 <div class="hero-cta">
                     <button class="btn btn-primary btn-glow btn-view-resume" id="btn-hero-view-resume">
-                        <i class="fa-solid fa-file-pdf"></i> Resume (View & Download)
+                        <i class="fa-solid fa-eye"></i> View Resume Online
                     </button>
-                    <a href="#projects" class="btn btn-secondary">
-                        <i class="fa-solid fa-diagram-project"></i> My Projects
+                    <a href="/api/download-resume" download class="btn btn-secondary">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download PDF
                     </a>
                     <a href="#ai-studio" class="btn btn-outline">
-                        <i class="fa-solid fa-wand-magic-sparkles text-cyan"></i> AI Studio
+                        <i class="fa-solid fa-brain"></i> Try Live AI Studio
                     </a>
                     <a href="#api-sandbox" class="btn btn-outline">
-                        <i class="fa-solid fa-server text-purple"></i> API Sandbox
+                        <i class="fa-solid fa-terminal"></i> Test REST APIs
                     </a>
                 </div>
 
@@ -145,7 +187,7 @@
                 <div class="metric-divider"></div>
                 <div class="metric-item">
                     <div class="metric-number">26</div>
-                    <div class="metric-label">CI/CD Automated Unit Tests</div>
+                    <div class="metric-label">CI/CD Automated Tests</div>
                 </div>
                 <div class="metric-divider"></div>
                 <div class="metric-item">
@@ -156,212 +198,168 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Me Section -->
     <section class="section" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">PROFESSIONAL OVERVIEW</span>
-                <h2 class="section-title">Backend Architecture Meets AI Intelligence</h2>
+                <span class="section-subtitle">BIOGRAPHY</span>
+                <h2 class="section-title">About Aman Varma</h2>
                 <div class="title-bar"></div>
             </div>
 
             <div class="about-grid">
                 <div class="glass-card about-card">
-                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3>Python Backend Mastery</h3>
-                    <p>
-                        Specialized in engineering robust RESTful microservices using **FastAPI** and **Flask**. Experienced in JWT authentication, middleware design, input validation, database-driven workflows (MySQL & MongoDB), and OpenAPI specifications.
+                    <h3><i class="fa-solid fa-code text-cyan"></i> Asynchronous Python & AI Engineer</h3>
+                    <p class="about-text">
+                        I am a Computer Science & Engineering graduate from <strong>NITRA Technical Campus (AKTU)</strong> with a strong focus on building high-speed asynchronous REST APIs, Generative AI prompt workflows, and automated text processing engines.
                     </p>
-                </div>
-
-                <div class="glass-card about-card">
-                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
-                    <h3>Generative AI & LLMs</h3>
-                    <p>
-                        Proficient in prompt engineering, LLM API integration, Retrieval-Augmented Generation (RAG) concepts, and building intelligent autonomous agent workflows for enterprise automation.
+                    <p class="about-text">
+                        During my 7+ months internship as a <strong>Python Developer Intern at Druidot Consulting (OPC) Pvt. Ltd.</strong>, I designed and deployed over 25+ RESTful API endpoints using FastAPI and Flask, created automated testing suites with GitHub Actions CI, and integrated MySQL/MongoDB databases for enterprise data consistency.
                     </p>
-                </div>
 
-                <div class="glass-card about-card">
-                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>NLP & Text Processing</h3>
-                    <p>
-                        Hands-on experience in TF-IDF near-duplicate text detection, sentiment polarity classification, readability analysis, and automated SEO content scoring (proven in projects like ContentDesk & NLPCRM).
-                    </p>
-                </div>
-
-                <div class="glass-card about-card">
-                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
-                    <h3>DevOps & Testing</h3>
-                    <p>
-                        Strong focus on software quality with Docker containerization, Git workflows, manual and automated unit testing, and GitHub Actions CI/CD pipelines.
-                    </p>
-                </div>
-            </div>
-        </div>
-    <!-- Technical Skills Matrix Section -->
-    <section class="section" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">CORE COMPETENCIES</span>
-                <h2 class="section-title">Technical Skills & Expertise</h2>
-                <div class="title-bar"></div>
-            </div>
-
-            <div class="skills-grid">
-                
-                <div class="glass-card skill-category-card">
-                    <div class="category-header">
-                        <i class="fa-brands fa-python cat-icon text-cyan"></i>
-                        <h3>Languages</h3>
-                    </div>
-                    <div class="skill-pills">
-                        <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
-                        <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
-                        <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
-                        <span class="skill-pill">C++</span>
-                        <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
-                        <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-graduation-cap highlight-icon text-cyan"></i>
+                            <div>
+                                <h4>B.Tech in Computer Science & Engineering</h4>
+                                <p>NITRA Technical Campus (AKTU) — <b>CGPA: 7.12 / 10</b> (2022 - 2026)</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-briefcase highlight-icon text-purple"></i>
+                            <div>
+                                <h4>Python Developer Intern</h4>
+                                <p>Druidot Consulting (OPC) Pvt. Ltd. (Feb 2026 – Present | Remote)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="glass-card skill-category-card">
-                    <div class="category-header">
-                        <i class="fa-solid fa-brain cat-icon text-purple"></i>
-                        <h3>AI, ML & NLP</h3>
-                    </div>
-                    <div class="skill-pills">
-                        <span class="skill-pill">Artificial Intelligence</span>
-                        <span class="skill-pill">Machine Learning</span>
-                        <span class="skill-pill">NLP</span>
-                        <span class="skill-pill">Generative AI</span>
-                        <span class="skill-pill">Prompt Engineering</span>
-                        <span class="skill-pill">LLMs</span>
-                        <span class="skill-pill">TF-IDF Vectorization</span>
-                        <span class="skill-pill">Speech AI</span>
-                    </div>
-                </div>
-
-                <div class="glass-card skill-category-card">
-                    <div class="category-header">
-                        <i class="fa-solid fa-server cat-icon text-cyan"></i>
-                        <h3>Backend Development</h3>
-                    </div>
-                    <div class="skill-pills">
-                        <span class="skill-pill">FastAPI</span>
-                        <span class="skill-pill">Flask</span>
-                        <span class="skill-pill">Django</span>
-                        <span class="skill-pill">RESTful APIs</span>
-                        <span class="skill-pill">Web Services</span>
-                        <span class="skill-pill">Microservices</span>
+                <div class="glass-card skills-card">
+                    <h3>Core Technical Focus</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python Backend (FastAPI / Flask)</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>RESTful API Design & OpenAPI</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Generative AI & LLM Workflows</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>NLP Text Processing & TF-IDF</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Databases (MySQL & MongoDB)</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="glass-card skill-category-card">
-                    <div class="category-header">
-                        <i class="fa-solid fa-shield-halved cat-icon text-green"></i>
-                        <h3>API & Auth Integration</h3>
-                    </div>
-                    <div class="skill-pills">
-                        <span class="skill-pill">REST API Design</span>
-                        <span class="skill-pill">OpenAPI / Swagger</span>
-                        <span class="skill-pill">JWT Auth</span>
-                        <span class="skill-pill">HTTP Protocols</span>
-                        <span class="skill-pill">Rate Limiting</span>
-                        <span class="skill-pill">Webhooks</span>
-                    </div>
-                </div>
-
-                <div class="glass-card skill-category-card">
-                    <div class="category-header">
-                        <i class="fa-solid fa-database cat-icon text-cyan"></i>
-                        <h3>Databases & Storage</h3>
-                    </div>
-                    <div class="skill-pills">
-                        <span class="skill-pill">MySQL</span>
-                        <span class="skill-pill">MongoDB</span>
-                        <span class="skill-pill">SQLite</span>
-                        <span class="skill-pill">Data Warehousing</span>
-                        <span class="skill-pill">ETL Pipelines</span>
-                    </div>
-                </div>
-
-                <div class="glass-card skill-category-card">
-                    <div class="category-header">
-                        <i class="fa-brands fa-docker cat-icon text-blue"></i>
-                        <h3>DevOps & Tools</h3>
-                    </div>
-                    <div class="skill-pills">
-                        <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
-                        <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</span>
-                        <span class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</span>
-                        <span class="skill-pill">CI/CD</span>
-                        <span class="skill-pill">GitHub Actions</span>
-                        <span class="skill-pill">Render</span>
-                        <span class="skill-pill">Vercel</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Experience & Education Section -->
-    <section class="section" id="experience">
-
+    <!-- Technical Skills Section -->
+    <section class="section" id="skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">CAREER PATH</span>
-                <h2 class="section-title">Work Experience & Education</h2>
+                <span class="section-subtitle">SKILL MATRIX</span>
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="glass-card skill-category">
+                    <div class="category-icon"><i class="fa-brands fa-python text-cyan"></i></div>
+                    <h3>Backend & Core Languages</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Python 3.13</span>
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">Django</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">C++</span>
+                        <span class="skill-pill">SQL</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-brain text-purple"></i></div>
+                    <h3>AI, ML & NLP Engineering</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Generative AI</span>
+                        <span class="skill-pill">Prompt Engineering</span>
+                        <span class="skill-pill">LLM Integrations</span>
+                        <span class="skill-pill">NLP Text Processing</span>
+                        <span class="skill-pill">TF-IDF Vectorization</span>
+                        <span class="skill-pill">Intent Classification</span>
+                        <span class="skill-pill">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-database text-yellow"></i></div>
+                    <h3>Databases & Architecture</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">SQLite</span>
+                        <span class="skill-pill">SQLAlchemy</span>
+                        <span class="skill-pill">JWT Auth</span>
+                        <span class="skill-pill">RESTful API Design</span>
+                        <span class="skill-pill">OpenAPI / Swagger</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-gears text-green"></i></div>
+                    <h3>Design, DevOps & Tools</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Git & GitHub</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">GitHub Actions CI/CD</span>
+                        <span class="skill-pill">Canva</span>
+                        <span class="skill-pill">Figma</span>
+                        <span class="skill-pill">Manual Testing</span>
+                        <span class="skill-pill">Data Validation</span>
+                        <span class="skill-pill">Debugging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CAREER TRACK</span>
+                <h2 class="section-title">Work Experience</h2>
                 <div class="title-bar"></div>
             </div>
 
             <div class="timeline">
-                
-                <!-- Experience Item -->
-                <div class="timeline-item">
+                <div class="glass-card timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="glass-card timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <span class="badge badge-purple mb-1">INTERNSHIP</span>
-                                <h3>Python Developer Intern</h3>
-                                <h4 class="company-name"><i class="fa-solid fa-building"></i> Druidot Consulting (OPC) Pvt. Ltd.</h4>
-                            </div>
-                            <div class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i> Feb 2026 – Present | Remote
-                            </div>
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="role-title">Python Developer Intern</h3>
+                            <p class="company-name"><i class="fa-solid fa-building text-cyan"></i> Druidot Consulting (OPC) Pvt. Ltd. (Remote)</p>
                         </div>
-                        <ul class="timeline-list">
-                            <li>Developed Python-based AI and backend applications using <strong>Flask and FastAPI</strong>, integrating RESTful APIs and data-processing workflows.</li>
-                            <li>Engineered <strong>NLP-based text processing</strong> and text analysis for AI-oriented application workflows.</li>
-                            <li>Integrated <strong>Generative AI and LLM-based capabilities</strong> through AI API integrations and prompt-driven workflows.</li>
-                            <li>Built and optimized REST APIs, backend services, automation scripts, and unit testing protocols.</li>
-                            <li>Executed data validation and processing with <strong>MySQL and MongoDB</strong> for reliable backend workflows.</li>
-                        </ul>
+                        <span class="timeline-date">Feb 2026 – Present</span>
                     </div>
+                    <ul class="timeline-list">
+                        <li>Developed and maintained RESTful APIs using Python, Flask, and FastAPI across agile sprint cycles, working with API specifications, backend services, testing, debugging, and iterative feature development.</li>
+                        <li>Built Python-based automated tests and validation checks for database-driven workflows, reducing manual verification effort and improving data quality before production processing.</li>
+                        <li>Performed SQL/NoSQL data validation and pipeline debugging across MySQL and MongoDB, supported database schema integrity, and improved query performance for customer-facing data workflows.</li>
+                    </ul>
                 </div>
-
-                <!-- Education Item -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="glass-card timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <span class="badge badge-info mb-1">DEGREE</span>
-                                <h3>B.Tech in Computer Science & Engineering</h3>
-                                <h4 class="company-name"><i class="fa-solid fa-graduation-cap"></i> NITRA Technical Campus, AKTU</h4>
-                            </div>
-                            <div class="timeline-date">
-                                <i class="fa-regular fa-calendar"></i> May 2022 – June 2026 | Ghaziabad, UP
-                            </div>
-                        </div>
-                        <p class="education-metrics">
-                            <strong>CGPA:</strong> <span class="text-cyan font-bold">7.12 / 10</span> | <strong>Focus:</strong> Data Structures & Algorithms, Backend Engineering, Artificial Intelligence, Database Management.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -542,13 +540,127 @@
                 </div>
 
             </div>
+        </div>
+    </section>
+
+    <!-- AI Studio Section -->
+    <section class="section" id="ai-studio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">LIVE AI ENGINE</span>
+                <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles text-cyan"></i> Generative AI & NLP Studio</h2>
+                <p class="section-desc">Test real-time NLP text analytics and AI prompt execution pipelines powered by FastAPI.</p>
+                <div class="title-bar"></div>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="studio-tabs justify-center mb-4">
+                <button class="tab-btn active" data-tab="tab-nlp"><i class="fa-solid fa-brain"></i> NLP Analysis</button>
+                <button class="tab-btn" data-tab="tab-genai"><i class="fa-solid fa-bolt"></i> GenAI Prompt Engine</button>
+            </div>
+
+            <!-- Tab 1: NLP -->
+            <div class="tab-content active" id="tab-nlp">
+                <div class="glass-card">
+                    <div class="nlp-grid">
+                        <div>
+                            <label class="input-label">Enter Input Text for NLP Processing:</label>
+                            <textarea id="nlp-input" class="form-control" rows="6" placeholder="Paste article, customer support message, or technical text here..."></textarea>
+                            <div class="preset-buttons">
+                                <span class="preset-label">Sample Presets:</span>
+                                <button type="button" class="btn-preset" id="preset-tech">FastAPI & Python</button>
+                                <button type="button" class="btn-preset" id="preset-crm">Customer Feedback</button>
+                                <button type="button" class="btn-preset" id="preset-clear">Clear</button>
+                            </div>
+                            <button id="btn-run-nlp" class="btn btn-primary btn-block mt-3">
+                                <i class="fa-solid fa-play"></i> Run NLP Analysis
+                            </button>
+                        </div>
+                        <div id="nlp-results" class="output-box">
+                            <div class="empty-state">
+                                <i class="fa-solid fa-chart-pie" style="font-size:2.5rem; color:var(--primary-cyan);"></i>
+                                <p>Click "Run NLP Analysis" to execute TF-IDF extraction, sentiment analysis, and keyword scoring!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: GenAI -->
+            <div class="tab-content" id="tab-genai">
+                <div class="glass-card">
+                    <div class="genai-grid">
+                        <div>
+                            <label class="input-label">Select Task Persona:</label>
+                            <select id="genai-mode" class="form-control mb-3">
+                                <option value="summarize">Text Summarization Engine</option>
+                                <option value="code">Python FastAPI Code Generator</option>
+                                <option value="sentiment">Advanced Sentiment & Intent Analysis</option>
+                                <option value="assistant">Aman AI Assistant</option>
+                            </select>
+                            <label class="input-label">Enter Prompt Instruction:</label>
+                            <textarea id="genai-prompt" class="form-control" rows="5" placeholder="Write instructions for the GenAI model..."></textarea>
+                            <button id="btn-run-genai" class="btn btn-primary btn-block mt-3">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate AI Output
+                            </button>
+                        </div>
+                        <div id="genai-output" class="output-box">
+                            <div class="empty-state">
+                                <i class="fa-solid fa-microchip" style="font-size:2.5rem; color:var(--accent-purple);"></i>
+                                <p>Select a task persona and prompt instruction to test live Generative AI workflows!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
 
-    <!-- React 18 Mounted App Container (AI Studio & API Sandbox) -->
-    <div id="react-root"></div>
+    <!-- REST API Sandbox Section -->
+    <section class="section" id="api-sandbox">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">INTERACTIVE DEVELOPER TOOL</span>
+                <h2 class="section-title"><i class="fa-solid fa-server text-purple"></i> REST API Sandbox</h2>
+                <p class="section-desc">Execute live HTTP requests directly against FastAPI endpoints and inspect JSON responses.</p>
+                <div class="title-bar"></div>
+            </div>
 
+            <div class="glass-card">
+                <div class="sandbox-controls">
+                    <div class="control-row">
+                        <div class="flex-1">
+                            <label class="input-label">Select API Endpoint:</label>
+                            <select id="sandbox-endpoint-select" class="form-control">
+                                <option value="GET /api/health">GET /api/health — System Status</option>
+                                <option value="GET /api/profile">GET /api/profile — Aman Varma Engineering Profile</option>
+                                <option value="GET /api/download-resume">GET /api/download-resume — PDF Resume Stream</option>
+                                <option value="POST /api/ai/nlp-analyze">POST /api/ai/nlp-analyze — Live NLP Pipeline</option>
+                                <option value="POST /api/ai/genai-prompt">POST /api/ai/genai-prompt — GenAI Prompt Execution</option>
+                            </select>
+                        </div>
+                        <button id="btn-execute-sandbox" class="btn btn-primary" style="height:44px;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Request
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sandbox-panes">
+                    <div>
+                        <div class="input-label mb-1">Request Payload (JSON):</div>
+                        <textarea id="sandbox-request-body" class="form-control code-font" rows="8" readonly>{
+  "info": "GET request requires no payload"
+}</textarea>
+                    </div>
+                    <div>
+                        <div class="input-label mb-1">Response Payload (JSON):</div>
+                        <pre id="sandbox-response-body" class="output-code-box"><code>Click "Send Request" to trigger live FastAPI endpoint!</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Certifications & Research Section -->
     <section class="section" id="certifications">
@@ -587,7 +699,44 @@
                     </div>
                 </div>
 
+                <!-- Cert 3: SAP Cloud ERP Onboarding -->
+                <div class="glass-card cert-card">
+                    <div class="cert-header-info">
+                        <h3 class="cert-title">Cloud Onboarding for SAP Cloud ERP</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-cloud text-cyan"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted cert-desc">SAP Cloud ERP architecture, SAP Activate framework, Cloud ALM, cutover strategy, and enterprise implementation.</p>
+                    </div>
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_sap_cloud_onboarding.png" alt="SAP Cloud ERP Onboarding Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View Full Certificate</div>
+                    </div>
+                </div>
 
+                <!-- Cert 4: Exploring SAP Cloud ERP -->
+                <div class="glass-card cert-card">
+                    <div class="cert-header-info">
+                        <h3 class="cert-title">Exploring SAP Cloud ERP</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-layer-group text-purple"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted cert-desc">Cloud ERP solutions, RISE and GROW with SAP, SAP Clean Core architecture, and business process integration.</p>
+                    </div>
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_sap_exploring_erp.png" alt="Exploring SAP Cloud ERP Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View Full Certificate</div>
+                    </div>
+                </div>
+
+                <!-- Cert 5: SAP BusinessObjects IDT -->
+                <div class="glass-card cert-card">
+                    <div class="cert-header-info">
+                        <h3 class="cert-title">Advanced SAP BusinessObjects IDT</h3>
+                        <p class="cert-issuer"><i class="fa-solid fa-database text-yellow"></i> SAP Learning (August 20, 2026)</p>
+                        <p class="text-muted cert-desc">Universe modeling, aggregate & index awareness, loop resolution, contexts, and enterprise universe security profiles.</p>
+                    </div>
+                    <div class="cert-img-box">
+                        <img src="/static/images/certificates/cert_sap_businessobjects.png" alt="SAP BusinessObjects IDT Certificate" class="cert-img-preview">
+                        <div class="cert-zoom-overlay"><i class="fa-solid fa-expand"></i> Click to View Full Certificate</div>
+                    </div>
+                </div>
 
                 <!-- Cert 6: Infosys Python -->
                 <div class="glass-card cert-card">
@@ -645,7 +794,6 @@
         </div>
     </section>
 
-
     <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="container">
@@ -675,7 +823,7 @@
                         <div class="method-item">
                             <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
                             <div>
-                                <span class="method-label">Mobile</span>
+                                <span class="method-label">Phone</span>
                                 <a href="tel:+916306572504" class="method-val">+91-6306572504</a>
                             </div>
                         </div>
@@ -684,7 +832,7 @@
                             <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <div>
                                 <span class="method-label">Location</span>
-                                <span class="method-val">Ghaziabad, Uttar Pradesh, India</span>
+                                <span class="method-val">Ghaziabad, UP, India</span>
                             </div>
                         </div>
 
@@ -718,7 +866,7 @@
                             </div>
                             <div class="form-group flex-1">
                                 <label class="input-label">Your Email *</label>
-                                <input type="email" id="contact-email" class="form-control" placeholder="e.g. rahul@company.com" required>
+                                <input type="email" id="contact-email" class="form-control" placeholder="e.g. rahul@example.com" required>
                             </div>
                         </div>
 
@@ -769,8 +917,101 @@
                     <button class="btn btn-outline btn-sm" id="btn-close-resume-modal"><i class="fa-solid fa-xmark"></i> Close</button>
                 </div>
             </div>
-            <div class="modal-body">
-                <iframe src="/api/download-resume" class="resume-iframe" title="Aman Varma Resume PDF"></iframe>
+            <div class="modal-body" style="background:#0f172a;">
+                <!-- HTML Structured Sheet for 100% Guaranteed Visibility across all browsers -->
+                <div style="background:#ffffff; color:#0f172a; padding:2rem; border-radius:8px; width:100%; max-width:820px; box-shadow:0 10px 30px rgba(0,0,0,0.5); font-family:'Helvetica Neue', Arial, sans-serif;">
+                    <div style="display:flex; justify-content:space-between; border-bottom:2px solid #1d4ed8; padding-bottom:0.75rem; margin-bottom:1rem;">
+                        <div>
+                            <h2 style="font-size:22px; margin:0; font-weight:800; color:#000;">Aman Varma</h2>
+                            <p style="margin:4px 0 0 0; color:#1d4ed8; font-weight:600; font-size:13px;">
+                                <a href="http://127.0.0.1:8000" style="color:#1d4ed8;">Portfolio</a> | 
+                                <a href="https://www.linkedin.com/in/aman-v-697771345" target="_blank" style="color:#1d4ed8;">LinkedIn</a> | 
+                                <a href="https://github.com/Amanvarma2231" target="_blank" style="color:#1d4ed8;">GitHub</a>
+                            </p>
+                        </div>
+                        <div style="text-align:right; font-size:12px; line-height:1.4; color:#334155;">
+                            <b>Ghaziabad, India</b><br/>
+                            Mobile: +91-6306572504<br/>
+                            Email: amangurauli@gmail.com
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:1rem;">
+                        <h4 style="font-size:12px; text-transform:uppercase; color:#1d4ed8; border-bottom:1px solid #1d4ed8; padding-bottom:2px; margin:0 0 6px 0;">PROFESSIONAL SUMMARY</h4>
+                        <p style="font-size:12px; line-height:1.5; color:#334155; margin:0;">
+                            B.Tech Computer Science & Engineering graduate with 6+ Month hands-on experience developing RESTful APIs, backend services, database-driven applications, automated testing workflows, and CI/CD pipelines in agile sprint environments. Skilled in Python, Java, JavaScript, FastAPI, Flask, SQL/NoSQL databases, API specifications, API testing, code review, automation, and Git. Experienced in developing customer-facing web applications, integrating backend services, validating data, and delivering software through iterative development and testing.
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom:1rem;">
+                        <h4 style="font-size:12px; text-transform:uppercase; color:#1d4ed8; border-bottom:1px solid #1d4ed8; padding-bottom:2px; margin:0 0 6px 0;">TECHNICAL SKILLS</h4>
+                        <table style="width:100%; font-size:12px; line-height:1.4; border-collapse:collapse;">
+                            <tr><td style="width:130px; vertical-align:top;"><b>Languages</b></td><td style="width:15px;">:</td><td>Python, Java, JavaScript, C++, SQL, HTML5</td></tr>
+                            <tr><td style="vertical-align:top;"><b>DSA</b></td><td>:</td><td>Data Structures Algorithms, Problem Solving, Algorithm Design</td></tr>
+                            <tr><td style="vertical-align:top;"><b>Backend</b></td><td>:</td><td>FastAPI, Flask, Django, RESTful APIs, Web Services</td></tr>
+                            <tr><td style="vertical-align:top;"><b>API & Integration</b></td><td>:</td><td>REST API Design, API Specifications, OpenAPI, API Integration, JWT, HTTP</td></tr>
+                            <tr><td style="vertical-align:top;"><b>Databases</b></td><td>:</td><td>MySQL, MongoDB, SQLite, SQLAlchemy, CRUD Operations</td></tr>
+                            <tr><td style="vertical-align:top;"><b>Design & DevOps</b></td><td>:</td><td>Canva, Figma, Manual Testing, Data Validation, Debugging, Git, GitHub, Docker, CI/CD</td></tr>
+                        </table>
+                    </div>
+
+                    <div style="margin-bottom:1rem;">
+                        <h4 style="font-size:12px; text-transform:uppercase; color:#1d4ed8; border-bottom:1px solid #1d4ed8; padding-bottom:2px; margin:0 0 6px 0;">EDUCATION</h4>
+                        <div style="display:flex; justify-content:space-between; font-size:12px;">
+                            <div><b>NITRA Technical Campus, AKTU</b><br/><i>B.Tech, Computer Science & Engineering</i> <b>CGPA: 7.12/10</b></div>
+                            <div style="text-align:right;">Ghaziabad UP, India<br/>May 2022 – June 2026</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:1rem;">
+                        <h4 style="font-size:12px; text-transform:uppercase; color:#1d4ed8; border-bottom:1px solid #1d4ed8; padding-bottom:2px; margin:0 0 6px 0;">EXPERIENCE</h4>
+                        <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:4px;">
+                            <div><b>Python Developer Intern</b><br/><i>Druidot Consulting (OPC) Pvt. Ltd.</i></div>
+                            <div style="text-align:right;">Feb 2026 – Present<br/><i>Remote</i></div>
+                        </div>
+                        <ul style="margin:0; padding-left:18px; font-size:12px; line-height:1.5; color:#334155;">
+                            <li>Developed and maintained RESTful APIs using Python, Flask, and FastAPI across agile sprint cycles, working with API specifications, backend services, testing, debugging, and iterative feature development.</li>
+                            <li>Built Python-based automated tests and validation checks for database-driven workflows, reducing manual verification effort and improving data quality before production processing.</li>
+                            <li>Performed SQL/NoSQL data validation and pipeline debugging across MySQL and MongoDB, supported database schema integrity, and improved query performance for customer-facing data workflows.</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-bottom:1rem;">
+                        <h4 style="font-size:12px; text-transform:uppercase; color:#1d4ed8; border-bottom:1px solid #1d4ed8; padding-bottom:2px; margin:0 0 6px 0;">PROJECTS</h4>
+                        <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:2px;">
+                            <div><b>NLPCRM – AI-Powered CRM Platform</b> <i>Python, FastAPI, Flask, MySQL, SQLite, REST APIs</i></div>
+                            <div><a href="https://github.com/Amanvarma2231/NLPCRM" target="_blank" style="color:#000;"><u>GitHub</u></a></div>
+                        </div>
+                        <ul style="margin:0 0 8px 0; padding-left:18px; font-size:12px; line-height:1.5; color:#334155;">
+                            <li>Designed and developed <b>25+ RESTful API endpoints</b> across contacts, NLP, email, and webhook modules.</li>
+                            <li>Integrated <b>MySQL and SQLite</b> for structured data persistence and database-driven workflows.</li>
+                            <li>Implemented <b>JWT-based access control, rate limiting, and input validation.</b></li>
+                        </ul>
+
+                        <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:2px;">
+                            <div><b>ContentDesk – AI Content & Data Processing Platform</b> <i>Python, Flask, SQLite, REST APIs, GitHub Actions</i></div>
+                            <div><a href="https://github.com/Amanvarma2231/Content-_Desk" target="_blank" style="color:#000;"><u>GitHub</u></a></div>
+                        </div>
+                        <ul style="margin:0; padding-left:18px; font-size:12px; line-height:1.5; color:#334155;">
+                            <li>Engineered a shared <b>Python/Flask backend</b> serving web and desktop application channels.</li>
+                            <li>Developed an SEO-scoring crawler and <b>TF-IDF near-duplicate detection workflow</b>.</li>
+                            <li>Implemented <b>26 automated unit tests</b> in GitHub Actions CI pipeline.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size:12px; text-transform:uppercase; color:#1d4ed8; border-bottom:1px solid #1d4ed8; padding-bottom:2px; margin:0 0 6px 0;">CERTIFICATIONS & ACTIVITIES</h4>
+                        <p style="font-size:12px; margin:0; line-height:1.5; color:#334155;">
+                            • <b>Python Programming Certification</b> – Infosys Springboard &nbsp;&nbsp;&nbsp;&nbsp; <b>Quantitative Research Job Simulation</b> – JPMorgan<br/>
+                            • Presented “Adaptive Residual-Energy Threshold LEACH for Performance & Energy Efficiency” at NGAISL-2026, HRIT University (Apr 2026).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PDF Iframe embed below -->
+                <div style="width:100%; max-width:820px; margin-top:1.5rem;">
+                    <iframe src="/api/download-resume" class="resume-iframe" title="Aman Varma Resume PDF"></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -795,10 +1036,9 @@
         <span class="ai-trigger-badge">AI</span>
     </div>
 
-
-    <!-- Scripts -->
+    <!-- Scripts (Pure Native Vanilla JS - No React / Babel) -->
     <script src="/static/js/app.js"></script>
-    <script type="text/babel" src="/static/js/react_app.js"></script>
+    <script src="/static/js/ai_playground.js"></script>
+    <script src="/static/js/api_tester.js"></script>
 </body>
 </html>
-
