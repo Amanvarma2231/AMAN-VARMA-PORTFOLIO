@@ -91,8 +91,7 @@
             </nav>
 
             <div class="nav-actions">
-                <button class="btn btn-outline btn-sm btn-view-resume" id="btn-open-resume-modal"><i class="fa-solid fa-eye text-cyan"></i> View Resume</button>
-                <a href="/api/download-resume" download class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Download</a>
+                <button class="btn btn-outline btn-sm btn-view-resume" id="btn-open-resume-modal"><i class="fa-solid fa-file-pdf text-cyan"></i> View Resume</button>
                 <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-regular fa-paper-plane"></i> Hire Me</a>
             </div>
 
@@ -117,28 +116,16 @@
                     B.Tech CSE Graduate with 7+ months internship experience building scalable <span class="text-highlight">FastAPI & Flask REST APIs</span>, <span class="text-highlight">Generative AI prompt workflows</span>, <span class="text-highlight">NLP text engines</span>, and robust database architectures with MySQL & MongoDB.
                 </p>
 
-                <div class="hero-cta" style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
-                    <!-- Position 1: Unified Resume Actions (View + Download) -->
-                    <div style="display:inline-flex; border-radius:12px; overflow:hidden; border:1px solid var(--primary-cyan); box-shadow:0 0 20px rgba(6, 182, 212, 0.3);">
-                        <button class="btn btn-primary btn-view-resume" id="btn-hero-view-resume" style="border-radius:12px 0 0 12px; border:none; padding:0.75rem 1.25rem;">
-                            <i class="fa-solid fa-eye"></i> View Resume Online
-                        </button>
-                        <a href="/api/download-resume" download class="btn" style="background:#0f172a; color:#fff; border-radius:0 12px 12px 0; border:none; border-left:1px solid rgba(6, 182, 212, 0.4); padding:0.75rem 1rem;" title="Download Official PDF Resume">
-                            <i class="fa-solid fa-download text-cyan"></i> PDF
-                        </a>
-                    </div>
-
-                    <!-- Position 2: My Projects -->
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-glow btn-view-resume" id="btn-hero-view-resume">
+                        <i class="fa-solid fa-file-pdf"></i> View Resume
+                    </button>
                     <a href="#projects" class="btn btn-secondary">
-                        <i class="fa-solid fa-diagram-project text-purple"></i> View My Projects
+                        <i class="fa-solid fa-diagram-project text-purple"></i> My Projects
                     </a>
-
-                    <!-- Position 3: Try Live AI Studio -->
                     <a href="#ai-studio" class="btn btn-outline">
                         <i class="fa-solid fa-brain text-cyan"></i> Try Live AI Studio
                     </a>
-
-                    <!-- Position 4: Test REST APIs -->
                     <a href="#api-sandbox" class="btn btn-outline">
                         <i class="fa-solid fa-terminal text-yellow"></i> Test REST APIs
                     </a>
