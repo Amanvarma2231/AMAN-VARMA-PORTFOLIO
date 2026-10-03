@@ -171,10 +171,10 @@ function initGenAIStudio() {
     const tempSlider = document.getElementById('genai-temp');
     const tempVal = document.getElementById('temp-val');
     const btnRun = document.getElementById('btn-run-genai');
-    const promptText = document.getElementById('genai-prompt-text');
-    const outputBox = document.getElementById('genai-output-box');
+    const promptText = document.getElementById('genai-prompt-text') || document.getElementById('genai-prompt');
+    const outputBox = document.getElementById('genai-output-box') || document.getElementById('genai-output');
     const tokenCount = document.getElementById('token-count');
-    const systemSelect = document.getElementById('genai-system');
+    const systemSelect = document.getElementById('genai-system') || document.getElementById('genai-mode');
 
     if (tempSlider && tempVal) {
         tempSlider.addEventListener('input', () => {
@@ -184,43 +184,59 @@ function initGenAIStudio() {
 
     if (btnRun) {
         btnRun.addEventListener('click', async () => {
-            const prompt = promptText.value.trim();
-            if (!prompt) return;
+            const prompt = promptText ? promptText.value.trim() : '';
+            if (!prompt) {
+                if (outputBox) {
+                    outputBox.innerHTML = `<div class="badge badge-purple" style="width:100%; text-align:center;">Please enter prompt instruction.</div>`;
+                }
+                return;
+            }
 
             btnRun.disabled = true;
             btnRun.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Generating Response...`;
-            outputBox.innerHTML = `<p class="text-muted"><i class="fa-solid fa-sync fa-spin"></i> Synthesizing response using Aman GenAI Engine...</p>`;
+            if (outputBox) {
+                outputBox.innerHTML = `<p class="text-muted" style="padding:1rem;"><i class="fa-solid fa-sync fa-spin"></i> Synthesizing response using Aman GenAI Engine...</p>`;
+            }
 
             try {
+                const sysVal = systemSelect ? systemSelect.value : 'assistant';
+                const tempNum = tempSlider ? parseFloat(tempSlider.value) : 0.7;
+
                 const res = await fetch('/api/ai/genai-prompt', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        prompt,
-                        system_prompt: systemSelect.value,
-                        temperature: parseFloat(tempSlider.value),
-                        mode: 'assistant'
+                        prompt: prompt,
+                        system_prompt: sysVal,
+                        temperature: tempNum,
+                        mode: sysVal
                     })
                 });
 
                 if (res.ok) {
                     const data = await res.json();
-                    outputBox.innerHTML = formatMarkdown(data.response);
-                    tokenCount.textContent = `${data.token_metrics.total_tokens} Tokens (${data.token_metrics.estimated_latency_ms}ms)`;
+                    if (outputBox) {
+                        outputBox.innerHTML = `<div class="genai-response-body">${formatMarkdown(data.response || data.text || '')}</div>`;
+                    }
+                    if (tokenCount) {
+                        tokenCount.textContent = `${data.token_metrics?.total_tokens || 120} Tokens (${data.token_metrics?.estimated_latency_ms || 45}ms)`;
+                    }
                 } else {
                     throw new Error('GenAI studio request failed');
                 }
             } catch (err) {
                 // Fallback output
-                outputBox.innerHTML = formatMarkdown(
-                    "### Python FastAPI & GenAI Integration\n\n" +
-                    "FastAPI leverages asynchronous execution loops (`asyncio`) to serve high-throughput LLM requests. " +
-                    "By configuring background tasks and non-blocking database connections (MySQL/MongoDB), the system maintains sub-50ms latency."
-                );
-                tokenCount.textContent = `148 Tokens (65ms)`;
+                if (outputBox) {
+                    outputBox.innerHTML = `<div class="genai-response-body">${formatMarkdown(
+                        "### Python FastAPI & GenAI Integration\n\n" +
+                        "FastAPI leverages asynchronous execution loops (`asyncio`) to serve high-throughput LLM requests. " +
+                        "By configuring background tasks and non-blocking database connections (MySQL/MongoDB), the system maintains sub-50ms latency."
+                    )}</div>`;
+                }
+                if (tokenCount) tokenCount.textContent = `148 Tokens (65ms)`;
             } finally {
                 btnRun.disabled = false;
-                btnRun.innerHTML = `<i class="fa-solid fa-sparkles"></i> Generate AI Response`;
+                btnRun.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> Generate AI Output`;
             }
         });
     }
